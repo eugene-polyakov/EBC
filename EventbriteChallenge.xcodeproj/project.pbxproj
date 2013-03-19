@@ -24,14 +24,10 @@
 		7ACAF8AD16F7EF6900CB6591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88516F7EF6900CB6591 /* Foundation.framework */; };
 		7ACAF8B516F7EF6900CB6591 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF8B316F7EF6900CB6591 /* InfoPlist.strings */; };
 		7ACAF8B816F7EF6900CB6591 /* EventbriteChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF8B716F7EF6900CB6591 /* EventbriteChallengeTests.m */; };
-		7ACAFE2A16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */; };
+		7ACAFE2A16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7ACAFE2B16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */; };
-		7ACAFE2C16F7F88F00CB6591 /* PFSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */; };
+		7ACAFE2C16F7F88F00CB6591 /* PFSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7ACAFE2D16F7F88F00CB6591 /* PFSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */; };
-		7ACAFE2E16F7F88F00CB6591 /* SphereViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2716F7F88F00CB6591 /* SphereViewAppDelegate.m */; };
-		7ACAFE2F16F7F88F00CB6591 /* SphereViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2716F7F88F00CB6591 /* SphereViewAppDelegate.m */; };
-		7ACAFE3016F7F88F00CB6591 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2916F7F88F00CB6591 /* SampleViewController.m */; };
-		7ACAFE3116F7F88F00CB6591 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2916F7F88F00CB6591 /* SampleViewController.m */; };
 		7ACAFE3216F80B9900CB6591 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF8AA16F7EF6900CB6591 /* SenTestingKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,10 +74,6 @@
 		7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFGoldenSectionSpiral.m; sourceTree = "<group>"; };
 		7ACAFE2416F7F88F00CB6591 /* PFSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFSphereView.h; sourceTree = "<group>"; };
 		7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFSphereView.m; sourceTree = "<group>"; };
-		7ACAFE2616F7F88F00CB6591 /* SphereViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereViewAppDelegate.h; sourceTree = "<group>"; };
-		7ACAFE2716F7F88F00CB6591 /* SphereViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphereViewAppDelegate.m; sourceTree = "<group>"; };
-		7ACAFE2816F7F88F00CB6591 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
-		7ACAFE2916F7F88F00CB6591 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,10 +200,6 @@
 				7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */,
 				7ACAFE2416F7F88F00CB6591 /* PFSphereView.h */,
 				7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */,
-				7ACAFE2616F7F88F00CB6591 /* SphereViewAppDelegate.h */,
-				7ACAFE2716F7F88F00CB6591 /* SphereViewAppDelegate.m */,
-				7ACAFE2816F7F88F00CB6591 /* SampleViewController.h */,
-				7ACAFE2916F7F88F00CB6591 /* SampleViewController.m */,
 			);
 			name = SphereView;
 			sourceTree = "<group>";
@@ -332,8 +320,6 @@
 				7ACAF89D16F7EF6900CB6591 /* ViewController.m in Sources */,
 				7ACAFE2A16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */,
 				7ACAFE2C16F7F88F00CB6591 /* PFSphereView.m in Sources */,
-				7ACAFE2E16F7F88F00CB6591 /* SphereViewAppDelegate.m in Sources */,
-				7ACAFE3016F7F88F00CB6591 /* SampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +330,6 @@
 				7ACAF8B816F7EF6900CB6591 /* EventbriteChallengeTests.m in Sources */,
 				7ACAFE2B16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */,
 				7ACAFE2D16F7F88F00CB6591 /* PFSphereView.m in Sources */,
-				7ACAFE2F16F7F88F00CB6591 /* SphereViewAppDelegate.m in Sources */,
-				7ACAFE3116F7F88F00CB6591 /* SampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +446,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/EventBriteChallenge/lib/SphereView\"";
 				INFOPLIST_FILE = "EventbriteChallenge/EventbriteChallenge-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,6 +467,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/EventBriteChallenge/lib/SphereView\"";
 				INFOPLIST_FILE = "EventbriteChallenge/EventbriteChallenge-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,6 +540,7 @@
 				7ACAF8BD16F7EF6900CB6591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7ACAF8BE16F7EF6900CB6591 /* Build configuration list for PBXNativeTarget "EventbriteChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +549,7 @@
 				7ACAF8C016F7EF6900CB6591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

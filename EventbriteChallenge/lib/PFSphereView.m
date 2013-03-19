@@ -16,6 +16,9 @@
 #import "PFSphereView.h"
 #import "PFGoldenSectionSpiral.h"
 #import <QuartzCore/QuartzCore.h>
+#import "PFPoint.h"
+#import "PFMatrix.h"
+#import "PFMatrixTransform.h"
 
 @interface PFSphereView(Private)
 - (CGFloat)coordinateForNormalizedValue:(CGFloat)normalizedValue withinRangeOffset:(CGFloat)rangeOffset;

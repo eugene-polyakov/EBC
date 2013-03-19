@@ -14,6 +14,7 @@
 //along with SphereView.  If not, see <http://www.gnu.org/licenses/>.
 
 #import "PFGoldenSectionSpiral.h"
+#import "PFPoint.h"
 
 @implementation PFGoldenSectionSpiral
 

@@ -13,6 +13,8 @@
 //You should have received a copy of the GNU General Public License
 //along with SphereView.  If not, see <http://www.gnu.org/licenses/>.
 
+#import "PFRadian.h"
+
 static PFMatrix PFMatrixTransform3DMakeFromPFPoint(PFPoint point) {
 	CGFloat pointRef[1][4] = {{point.x, point.y, point.z, 1}};
 	
