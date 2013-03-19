@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7ACAF88416F7EF6900CB6591 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88316F7EF6900CB6591 /* UIKit.framework */; };
+		7ACAF88616F7EF6900CB6591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88516F7EF6900CB6591 /* Foundation.framework */; };
+		7ACAF88816F7EF6900CB6591 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88716F7EF6900CB6591 /* CoreGraphics.framework */; };
+		7ACAF88E16F7EF6900CB6591 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF88C16F7EF6900CB6591 /* InfoPlist.strings */; };
+		7ACAF89016F7EF6900CB6591 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF88F16F7EF6900CB6591 /* main.m */; };
+		7ACAF89416F7EF6900CB6591 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF89316F7EF6900CB6591 /* AppDelegate.m */; };
+		7ACAF89616F7EF6900CB6591 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF89516F7EF6900CB6591 /* Default.png */; };
+		7ACAF89816F7EF6900CB6591 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF89716F7EF6900CB6591 /* Default@2x.png */; };
+		7ACAF89A16F7EF6900CB6591 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF89916F7EF6900CB6591 /* Default-568h@2x.png */; };
+		7ACAF89D16F7EF6900CB6591 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF89C16F7EF6900CB6591 /* ViewController.m */; };
+		7ACAF8A016F7EF6900CB6591 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF89E16F7EF6900CB6591 /* ViewController_iPhone.xib */; };
+		7ACAF8A316F7EF6900CB6591 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF8A116F7EF6900CB6591 /* ViewController_iPad.xib */; };
+		7ACAF8AB16F7EF6900CB6591 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF8AA16F7EF6900CB6591 /* SenTestingKit.framework */; };
+		7ACAF8AC16F7EF6900CB6591 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88316F7EF6900CB6591 /* UIKit.framework */; };
+		7ACAF8AD16F7EF6900CB6591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88516F7EF6900CB6591 /* Foundation.framework */; };
+		7ACAF8B516F7EF6900CB6591 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF8B316F7EF6900CB6591 /* InfoPlist.strings */; };
+		7ACAF8B816F7EF6900CB6591 /* EventbriteChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF8B716F7EF6900CB6591 /* EventbriteChallengeTests.m */; };
+		7ACAFE2A16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */; };
+		7ACAFE2B16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */; };
+		7ACAFE2C16F7F88F00CB6591 /* PFSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */; };
+		7ACAFE2D16F7F88F00CB6591 /* PFSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */; };
+		7ACAFE2E16F7F88F00CB6591 /* SphereViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2716F7F88F00CB6591 /* SphereViewAppDelegate.m */; };
+		7ACAFE2F16F7F88F00CB6591 /* SphereViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2716F7F88F00CB6591 /* SphereViewAppDelegate.m */; };
+		7ACAFE3016F7F88F00CB6591 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2916F7F88F00CB6591 /* SampleViewController.m */; };
+		7ACAFE3116F7F88F00CB6591 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2916F7F88F00CB6591 /* SampleViewController.m */; };
+		7ACAFE3216F80B9900CB6591 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF8AA16F7EF6900CB6591 /* SenTestingKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7ACAF8AE16F7EF6900CB6591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ACAF87816F7EF6900CB6591 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ACAF87F16F7EF6900CB6591;
+			remoteInfo = EventbriteChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7ACAF88016F7EF6900CB6591 /* EventbriteChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventbriteChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ACAF88316F7EF6900CB6591 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7ACAF88516F7EF6900CB6591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7ACAF88716F7EF6900CB6591 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7ACAF88B16F7EF6900CB6591 /* EventbriteChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EventbriteChallenge-Info.plist"; sourceTree = "<group>"; };
+		7ACAF88D16F7EF6900CB6591 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7ACAF88F16F7EF6900CB6591 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7ACAF89116F7EF6900CB6591 /* EventbriteChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EventbriteChallenge-Prefix.pch"; sourceTree = "<group>"; };
+		7ACAF89216F7EF6900CB6591 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7ACAF89316F7EF6900CB6591 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7ACAF89516F7EF6900CB6591 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7ACAF89716F7EF6900CB6591 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7ACAF89916F7EF6900CB6591 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7ACAF89B16F7EF6900CB6591 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7ACAF89C16F7EF6900CB6591 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7ACAF89F16F7EF6900CB6591 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		7ACAF8A216F7EF6900CB6591 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		7ACAF8A916F7EF6900CB6591 /* EventbriteChallengeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventbriteChallengeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ACAF8AA16F7EF6900CB6591 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7ACAF8B216F7EF6900CB6591 /* EventbriteChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EventbriteChallengeTests-Info.plist"; sourceTree = "<group>"; };
+		7ACAF8B416F7EF6900CB6591 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7ACAF8B616F7EF6900CB6591 /* EventbriteChallengeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventbriteChallengeTests.h; sourceTree = "<group>"; };
+		7ACAF8B716F7EF6900CB6591 /* EventbriteChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventbriteChallengeTests.m; sourceTree = "<group>"; };
+		7ACAFE1D16F7F88F00CB6591 /* PFPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFPoint.h; sourceTree = "<group>"; };
+		7ACAFE1E16F7F88F00CB6591 /* PFMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMatrix.h; sourceTree = "<group>"; };
+		7ACAFE1F16F7F88F00CB6591 /* PFMatrixTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMatrixTransform.h; sourceTree = "<group>"; };
+		7ACAFE2016F7F88F00CB6591 /* PFRadian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFRadian.h; sourceTree = "<group>"; };
+		7ACAFE2116F7F88F00CB6591 /* PFAxisDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFAxisDirection.h; sourceTree = "<group>"; };
+		7ACAFE2216F7F88F00CB6591 /* PFGoldenSectionSpiral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFGoldenSectionSpiral.h; sourceTree = "<group>"; };
+		7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFGoldenSectionSpiral.m; sourceTree = "<group>"; };
+		7ACAFE2416F7F88F00CB6591 /* PFSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFSphereView.h; sourceTree = "<group>"; };
+		7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFSphereView.m; sourceTree = "<group>"; };
+		7ACAFE2616F7F88F00CB6591 /* SphereViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereViewAppDelegate.h; sourceTree = "<group>"; };
+		7ACAFE2716F7F88F00CB6591 /* SphereViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphereViewAppDelegate.m; sourceTree = "<group>"; };
+		7ACAFE2816F7F88F00CB6591 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
+		7ACAFE2916F7F88F00CB6591 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7ACAF87D16F7EF6900CB6591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ACAFE3216F80B9900CB6591 /* SenTestingKit.framework in Frameworks */,
+				7ACAF88416F7EF6900CB6591 /* UIKit.framework in Frameworks */,
+				7ACAF88616F7EF6900CB6591 /* Foundation.framework in Frameworks */,
+				7ACAF88816F7EF6900CB6591 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ACAF8A516F7EF6900CB6591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ACAF8AB16F7EF6900CB6591 /* SenTestingKit.framework in Frameworks */,
+				7ACAF8AC16F7EF6900CB6591 /* UIKit.framework in Frameworks */,
+				7ACAF8AD16F7EF6900CB6591 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7ACAF87716F7EF6900CB6591 = {
+			isa = PBXGroup;
+			children = (
+				7ACAF8C116F7EF7F00CB6591 /* lib */,
+				7ACAF88916F7EF6900CB6591 /* EventbriteChallenge */,
+				7ACAF8B016F7EF6900CB6591 /* EventbriteChallengeTests */,
+				7ACAF88216F7EF6900CB6591 /* Frameworks */,
+				7ACAF88116F7EF6900CB6591 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7ACAF88116F7EF6900CB6591 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAF88016F7EF6900CB6591 /* EventbriteChallenge.app */,
+				7ACAF8A916F7EF6900CB6591 /* EventbriteChallengeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7ACAF88216F7EF6900CB6591 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAF88316F7EF6900CB6591 /* UIKit.framework */,
+				7ACAF88516F7EF6900CB6591 /* Foundation.framework */,
+				7ACAF88716F7EF6900CB6591 /* CoreGraphics.framework */,
+				7ACAF8AA16F7EF6900CB6591 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ACAF88916F7EF6900CB6591 /* EventbriteChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAF89216F7EF6900CB6591 /* AppDelegate.h */,
+				7ACAF89316F7EF6900CB6591 /* AppDelegate.m */,
+				7ACAF89B16F7EF6900CB6591 /* ViewController.h */,
+				7ACAF89C16F7EF6900CB6591 /* ViewController.m */,
+				7ACAF89E16F7EF6900CB6591 /* ViewController_iPhone.xib */,
+				7ACAF8A116F7EF6900CB6591 /* ViewController_iPad.xib */,
+				7ACAF88A16F7EF6900CB6591 /* Supporting Files */,
+			);
+			path = EventbriteChallenge;
+			sourceTree = "<group>";
+		};
+		7ACAF88A16F7EF6900CB6591 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAF88B16F7EF6900CB6591 /* EventbriteChallenge-Info.plist */,
+				7ACAF88C16F7EF6900CB6591 /* InfoPlist.strings */,
+				7ACAF88F16F7EF6900CB6591 /* main.m */,
+				7ACAF89116F7EF6900CB6591 /* EventbriteChallenge-Prefix.pch */,
+				7ACAF89516F7EF6900CB6591 /* Default.png */,
+				7ACAF89716F7EF6900CB6591 /* Default@2x.png */,
+				7ACAF89916F7EF6900CB6591 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7ACAF8B016F7EF6900CB6591 /* EventbriteChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAF8B616F7EF6900CB6591 /* EventbriteChallengeTests.h */,
+				7ACAF8B716F7EF6900CB6591 /* EventbriteChallengeTests.m */,
+				7ACAF8B116F7EF6900CB6591 /* Supporting Files */,
+			);
+			path = EventbriteChallengeTests;
+			sourceTree = "<group>";
+		};
+		7ACAF8B116F7EF6900CB6591 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAF8B216F7EF6900CB6591 /* EventbriteChallengeTests-Info.plist */,
+				7ACAF8B316F7EF6900CB6591 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7ACAF8C116F7EF7F00CB6591 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAFE1C16F7F88200CB6591 /* SphereView */,
+			);
+			name = lib;
+			path = EventbriteChallenge/lib;
+			sourceTree = "<group>";
+		};
+		7ACAFE1C16F7F88200CB6591 /* SphereView */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAFE1D16F7F88F00CB6591 /* PFPoint.h */,
+				7ACAFE1E16F7F88F00CB6591 /* PFMatrix.h */,
+				7ACAFE1F16F7F88F00CB6591 /* PFMatrixTransform.h */,
+				7ACAFE2016F7F88F00CB6591 /* PFRadian.h */,
+				7ACAFE2116F7F88F00CB6591 /* PFAxisDirection.h */,
+				7ACAFE2216F7F88F00CB6591 /* PFGoldenSectionSpiral.h */,
+				7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */,
+				7ACAFE2416F7F88F00CB6591 /* PFSphereView.h */,
+				7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */,
+				7ACAFE2616F7F88F00CB6591 /* SphereViewAppDelegate.h */,
+				7ACAFE2716F7F88F00CB6591 /* SphereViewAppDelegate.m */,
+				7ACAFE2816F7F88F00CB6591 /* SampleViewController.h */,
+				7ACAFE2916F7F88F00CB6591 /* SampleViewController.m */,
+			);
+			name = SphereView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7ACAF87F16F7EF6900CB6591 /* EventbriteChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ACAF8BB16F7EF6900CB6591 /* Build configuration list for PBXNativeTarget "EventbriteChallenge" */;
+			buildPhases = (
+				7ACAF87C16F7EF6900CB6591 /* Sources */,
+				7ACAF87D16F7EF6900CB6591 /* Frameworks */,
+				7ACAF87E16F7EF6900CB6591 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EventbriteChallenge;
+			productName = EventbriteChallenge;
+			productReference = 7ACAF88016F7EF6900CB6591 /* EventbriteChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7ACAF8A816F7EF6900CB6591 /* EventbriteChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ACAF8BE16F7EF6900CB6591 /* Build configuration list for PBXNativeTarget "EventbriteChallengeTests" */;
+			buildPhases = (
+				7ACAF8A416F7EF6900CB6591 /* Sources */,
+				7ACAF8A516F7EF6900CB6591 /* Frameworks */,
+				7ACAF8A616F7EF6900CB6591 /* Resources */,
+				7ACAF8A716F7EF6900CB6591 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7ACAF8AF16F7EF6900CB6591 /* PBXTargetDependency */,
+			);
+			name = EventbriteChallengeTests;
+			productName = EventbriteChallengeTests;
+			productReference = 7ACAF8A916F7EF6900CB6591 /* EventbriteChallengeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7ACAF87816F7EF6900CB6591 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Eugene Polyakov";
+			};
+			buildConfigurationList = 7ACAF87B16F7EF6900CB6591 /* Build configuration list for PBXProject "EventbriteChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7ACAF87716F7EF6900CB6591;
+			productRefGroup = 7ACAF88116F7EF6900CB6591 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7ACAF87F16F7EF6900CB6591 /* EventbriteChallenge */,
+				7ACAF8A816F7EF6900CB6591 /* EventbriteChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7ACAF87E16F7EF6900CB6591 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ACAF88E16F7EF6900CB6591 /* InfoPlist.strings in Resources */,
+				7ACAF89616F7EF6900CB6591 /* Default.png in Resources */,
+				7ACAF89816F7EF6900CB6591 /* Default@2x.png in Resources */,
+				7ACAF89A16F7EF6900CB6591 /* Default-568h@2x.png in Resources */,
+				7ACAF8A016F7EF6900CB6591 /* ViewController_iPhone.xib in Resources */,
+				7ACAF8A316F7EF6900CB6591 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ACAF8A616F7EF6900CB6591 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ACAF8B516F7EF6900CB6591 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7ACAF8A716F7EF6900CB6591 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7ACAF87C16F7EF6900CB6591 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ACAF89016F7EF6900CB6591 /* main.m in Sources */,
+				7ACAF89416F7EF6900CB6591 /* AppDelegate.m in Sources */,
+				7ACAF89D16F7EF6900CB6591 /* ViewController.m in Sources */,
+				7ACAFE2A16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */,
+				7ACAFE2C16F7F88F00CB6591 /* PFSphereView.m in Sources */,
+				7ACAFE2E16F7F88F00CB6591 /* SphereViewAppDelegate.m in Sources */,
+				7ACAFE3016F7F88F00CB6591 /* SampleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ACAF8A416F7EF6900CB6591 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ACAF8B816F7EF6900CB6591 /* EventbriteChallengeTests.m in Sources */,
+				7ACAFE2B16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */,
+				7ACAFE2D16F7F88F00CB6591 /* PFSphereView.m in Sources */,
+				7ACAFE2F16F7F88F00CB6591 /* SphereViewAppDelegate.m in Sources */,
+				7ACAFE3116F7F88F00CB6591 /* SampleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7ACAF8AF16F7EF6900CB6591 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7ACAF87F16F7EF6900CB6591 /* EventbriteChallenge */;
+			targetProxy = 7ACAF8AE16F7EF6900CB6591 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7ACAF88C16F7EF6900CB6591 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ACAF88D16F7EF6900CB6591 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7ACAF89E16F7EF6900CB6591 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ACAF89F16F7EF6900CB6591 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		7ACAF8A116F7EF6900CB6591 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ACAF8A216F7EF6900CB6591 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		7ACAF8B316F7EF6900CB6591 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ACAF8B416F7EF6900CB6591 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7ACAF8B916F7EF6900CB6591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7ACAF8BA16F7EF6900CB6591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7ACAF8BC16F7EF6900CB6591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
+				INFOPLIST_FILE = "EventbriteChallenge/EventbriteChallenge-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/EventBriteChallenge/lib/OCMock\"";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7ACAF8BD16F7EF6900CB6591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
+				INFOPLIST_FILE = "EventbriteChallenge/EventbriteChallenge-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/EventBriteChallenge/lib/OCMock\"";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7ACAF8BF16F7EF6900CB6591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EventbriteChallenge.app/EventbriteChallenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
+				INFOPLIST_FILE = "EventbriteChallengeTests/EventbriteChallengeTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7ACAF8C016F7EF6900CB6591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EventbriteChallenge.app/EventbriteChallenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
+				INFOPLIST_FILE = "EventbriteChallengeTests/EventbriteChallengeTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7ACAF87B16F7EF6900CB6591 /* Build configuration list for PBXProject "EventbriteChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ACAF8B916F7EF6900CB6591 /* Debug */,
+				7ACAF8BA16F7EF6900CB6591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ACAF8BB16F7EF6900CB6591 /* Build configuration list for PBXNativeTarget "EventbriteChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ACAF8BC16F7EF6900CB6591 /* Debug */,
+				7ACAF8BD16F7EF6900CB6591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7ACAF8BE16F7EF6900CB6591 /* Build configuration list for PBXNativeTarget "EventbriteChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ACAF8BF16F7EF6900CB6591 /* Debug */,
+				7ACAF8C016F7EF6900CB6591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7ACAF87816F7EF6900CB6591 /* Project object */;
+}
