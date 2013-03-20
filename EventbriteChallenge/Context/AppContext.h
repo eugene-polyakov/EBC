@@ -12,4 +12,6 @@
 
 +(AppContext*)sharedInstance;
 
+-(NSString*)apiKey;
+
 @end

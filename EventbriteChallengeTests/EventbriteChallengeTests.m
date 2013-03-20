@@ -21,7 +21,7 @@ static NSString * const API_KEY_KEY = @"EventBriteAPIKey";
 
 +(NSString*)apiKey {
     if (!apiKey) {
-        apiKey = [[[NSBundle mainBundle] infoDictionary] objectForKey:API_KEY_KEY];
+        apiKey = [[[NSBundle bundleForClass:NSClassFromString(@"EventbriteChallengeTests")] infoDictionary] objectForKey:API_KEY_KEY];
     }
     return apiKey;
 }

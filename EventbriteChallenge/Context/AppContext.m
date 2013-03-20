@@ -9,6 +9,13 @@
 #import "AppContext.h"
 #import <RestKit/RestKit.h>
 #import "ModelMapping.h"
+#import "KeyUtils.h"
+
+static NSString * const keyPart2 = @"712LL4";// obfuscated @"IOL22J";
+static NSString * const keyPart1 = @"C2XEX";
+static NSString * const keyPart3 = @"PUE2DYQ";
+
+static NSString * apiKey;
 
 @implementation AppContext
 
@@ -43,6 +50,14 @@
 
     }
     return self;
+}
+
+-(NSString*)apiKey {
+    if (!apiKey) {
+        // Not realy an encryption, just some protection from casual hackers looking for strings
+        apiKey = [[keyPart1 stringByAppendingString:[KeyUtils obfuscate:keyPart2 withKey:@"~~"]] stringByAppendingString:keyPart3];
+    }
+    return apiKey;
 }
 
 @end

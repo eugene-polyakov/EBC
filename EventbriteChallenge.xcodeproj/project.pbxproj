@@ -13,6 +13,12 @@
 		7A79A3D816FA0B4500CA2DDA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAFEA716F815F000CB6591 /* Security.framework */; };
 		7A79A3D916FA0E0200CA2DDA /* AFOAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A79A3CB16FA01F300CA2DDA /* AFOAuth2Client.m */; };
 		7A79A3DC16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A79A3DB16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.m */; };
+		7A7EFEAC16FA160D005DA4BA /* TagCloudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFEAA16FA160D005DA4BA /* TagCloudViewController.m */; };
+		7A7EFEAD16FA160D005DA4BA /* TagCloudViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7EFEAB16FA160D005DA4BA /* TagCloudViewController.xib */; };
+		7A7EFEAF16FA1640005DA4BA /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7EFEAE16FA1640005DA4BA /* MainWindow.xib */; };
+		7A7EFEB516FA1A14005DA4BA /* KeyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFEB416FA1A14005DA4BA /* KeyTest.m */; };
+		7A7EFEB816FA1A30005DA4BA /* KeyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFEB716FA1A30005DA4BA /* KeyUtils.m */; };
+		7A7EFEB916FA1A30005DA4BA /* KeyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFEB716FA1A30005DA4BA /* KeyUtils.m */; };
 		7ACAF88416F7EF6900CB6591 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88316F7EF6900CB6591 /* UIKit.framework */; };
 		7ACAF88616F7EF6900CB6591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88516F7EF6900CB6591 /* Foundation.framework */; };
 		7ACAF88816F7EF6900CB6591 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88716F7EF6900CB6591 /* CoreGraphics.framework */; };
@@ -22,9 +28,6 @@
 		7ACAF89616F7EF6900CB6591 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF89516F7EF6900CB6591 /* Default.png */; };
 		7ACAF89816F7EF6900CB6591 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF89716F7EF6900CB6591 /* Default@2x.png */; };
 		7ACAF89A16F7EF6900CB6591 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF89916F7EF6900CB6591 /* Default-568h@2x.png */; };
-		7ACAF89D16F7EF6900CB6591 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF89C16F7EF6900CB6591 /* ViewController.m */; };
-		7ACAF8A016F7EF6900CB6591 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF89E16F7EF6900CB6591 /* ViewController_iPhone.xib */; };
-		7ACAF8A316F7EF6900CB6591 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF8A116F7EF6900CB6591 /* ViewController_iPad.xib */; };
 		7ACAF8AB16F7EF6900CB6591 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF8AA16F7EF6900CB6591 /* SenTestingKit.framework */; };
 		7ACAF8AC16F7EF6900CB6591 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88316F7EF6900CB6591 /* UIKit.framework */; };
 		7ACAF8AD16F7EF6900CB6591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88516F7EF6900CB6591 /* Foundation.framework */; };
@@ -101,6 +104,14 @@
 		7A79A3CB16FA01F300CA2DDA /* AFOAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAuth2Client.m; sourceTree = "<group>"; };
 		7A79A3DA16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventbriteChallengeContextTests.h; sourceTree = "<group>"; };
 		7A79A3DB16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventbriteChallengeContextTests.m; sourceTree = "<group>"; };
+		7A7EFEA916FA160D005DA4BA /* TagCloudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagCloudViewController.h; sourceTree = "<group>"; };
+		7A7EFEAA16FA160D005DA4BA /* TagCloudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagCloudViewController.m; sourceTree = "<group>"; };
+		7A7EFEAB16FA160D005DA4BA /* TagCloudViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagCloudViewController.xib; sourceTree = "<group>"; };
+		7A7EFEAE16FA1640005DA4BA /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		7A7EFEB316FA1A14005DA4BA /* KeyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyTest.h; sourceTree = "<group>"; };
+		7A7EFEB416FA1A14005DA4BA /* KeyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyTest.m; sourceTree = "<group>"; };
+		7A7EFEB616FA1A30005DA4BA /* KeyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyUtils.h; sourceTree = "<group>"; };
+		7A7EFEB716FA1A30005DA4BA /* KeyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyUtils.m; sourceTree = "<group>"; };
 		7ACAF88016F7EF6900CB6591 /* EventbriteChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventbriteChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACAF88316F7EF6900CB6591 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7ACAF88516F7EF6900CB6591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,10 +125,6 @@
 		7ACAF89516F7EF6900CB6591 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7ACAF89716F7EF6900CB6591 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7ACAF89916F7EF6900CB6591 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7ACAF89B16F7EF6900CB6591 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7ACAF89C16F7EF6900CB6591 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7ACAF89F16F7EF6900CB6591 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		7ACAF8A216F7EF6900CB6591 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		7ACAF8A916F7EF6900CB6591 /* EventbriteChallengeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventbriteChallengeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACAF8AA16F7EF6900CB6591 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7ACAF8B216F7EF6900CB6591 /* EventbriteChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EventbriteChallengeTests-Info.plist"; sourceTree = "<group>"; };
@@ -191,6 +198,9 @@
 		7A79A22A16F9404700CA2DDA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7A7EFEA916FA160D005DA4BA /* TagCloudViewController.h */,
+				7A7EFEAA16FA160D005DA4BA /* TagCloudViewController.m */,
+				7A7EFEAB16FA160D005DA4BA /* TagCloudViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +220,15 @@
 				7A79A3CB16FA01F300CA2DDA /* AFOAuth2Client.m */,
 			);
 			path = AFOAuth2Client;
+			sourceTree = "<group>";
+		};
+		7A7EFEB216FA1967005DA4BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7A7EFEB616FA1A30005DA4BA /* KeyUtils.h */,
+				7A7EFEB716FA1A30005DA4BA /* KeyUtils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		7ACAF87716F7EF6900CB6591 = {
@@ -251,15 +270,12 @@
 		7ACAF88916F7EF6900CB6591 /* EventbriteChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				7A7EFEB216FA1967005DA4BA /* Utils */,
 				7A79A22A16F9404700CA2DDA /* Controllers */,
 				7A79A21D16F92F2500CA2DDA /* Context */,
 				7ACAFEB616F8275100CB6591 /* Model */,
 				7ACAF89216F7EF6900CB6591 /* AppDelegate.h */,
 				7ACAF89316F7EF6900CB6591 /* AppDelegate.m */,
-				7ACAF89B16F7EF6900CB6591 /* ViewController.h */,
-				7ACAF89C16F7EF6900CB6591 /* ViewController.m */,
-				7ACAF89E16F7EF6900CB6591 /* ViewController_iPhone.xib */,
-				7ACAF8A116F7EF6900CB6591 /* ViewController_iPad.xib */,
 				7ACAF88A16F7EF6900CB6591 /* Supporting Files */,
 			);
 			path = EventbriteChallenge;
@@ -275,6 +291,9 @@
 				7ACAF89516F7EF6900CB6591 /* Default.png */,
 				7ACAF89716F7EF6900CB6591 /* Default@2x.png */,
 				7ACAF89916F7EF6900CB6591 /* Default-568h@2x.png */,
+				7A7EFEAE16FA1640005DA4BA /* MainWindow.xib */,
+				7A7EFEB316FA1A14005DA4BA /* KeyTest.h */,
+				7A7EFEB416FA1A14005DA4BA /* KeyTest.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -473,8 +492,8 @@
 				7ACAF89616F7EF6900CB6591 /* Default.png in Resources */,
 				7ACAF89816F7EF6900CB6591 /* Default@2x.png in Resources */,
 				7ACAF89A16F7EF6900CB6591 /* Default-568h@2x.png in Resources */,
-				7ACAF8A016F7EF6900CB6591 /* ViewController_iPhone.xib in Resources */,
-				7ACAF8A316F7EF6900CB6591 /* ViewController_iPad.xib in Resources */,
+				7A7EFEAD16FA160D005DA4BA /* TagCloudViewController.xib in Resources */,
+				7A7EFEAF16FA1640005DA4BA /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +531,6 @@
 			files = (
 				7ACAF89016F7EF6900CB6591 /* main.m in Sources */,
 				7ACAF89416F7EF6900CB6591 /* AppDelegate.m in Sources */,
-				7ACAF89D16F7EF6900CB6591 /* ViewController.m in Sources */,
 				7ACAFE2A16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */,
 				7ACAFE2C16F7F88F00CB6591 /* PFSphereView.m in Sources */,
 				7ACAFEB916F8276200CB6591 /* Model.m in Sources */,
@@ -520,6 +538,8 @@
 				7ACAFEE316F82E1300CB6591 /* ModelMapping.m in Sources */,
 				7A79A22316F92F3B00CA2DDA /* AppContext.m in Sources */,
 				7A79A3D916FA0E0200CA2DDA /* AFOAuth2Client.m in Sources */,
+				7A7EFEAC16FA160D005DA4BA /* TagCloudViewController.m in Sources */,
+				7A7EFEB816FA1A30005DA4BA /* KeyUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +554,8 @@
 				7ACAFEDA16F828EA00CB6591 /* JSONKit.m in Sources */,
 				7ACAFEE416F82E1300CB6591 /* ModelMapping.m in Sources */,
 				7A79A3DC16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.m in Sources */,
+				7A7EFEB516FA1A14005DA4BA /* KeyTest.m in Sources */,
+				7A7EFEB916FA1A30005DA4BA /* KeyUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,22 +581,6 @@
 				7ACAF88D16F7EF6900CB6591 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7ACAF89E16F7EF6900CB6591 /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7ACAF89F16F7EF6900CB6591 /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		7ACAF8A116F7EF6900CB6591 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7ACAF8A216F7EF6900CB6591 /* en */,
-			);
-			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		7ACAF8B316F7EF6900CB6591 /* InfoPlist.strings */ = {
@@ -651,7 +657,6 @@
 		7ACAF8BC16F7EF6900CB6591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EventBriteAPIKey = C2XEXIOL22JPUE2DYQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -678,7 +683,6 @@
 		7ACAF8BD16F7EF6900CB6591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EventBriteAPIKey = C2XEXIOL22JPUE2DYQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
