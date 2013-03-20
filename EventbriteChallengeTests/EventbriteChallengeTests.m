@@ -60,9 +60,26 @@
     RKObjectRequestOperation *requestOperation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ responseDescriptor ]];
 	[requestOperation start];
 	[requestOperation waitUntilFinished];
-	STAssertEquals(requestOperation.mappingResult.array.count, 1, @"Expected to load one event");
+	STAssertTrue(requestOperation.mappingResult.array.count == 11, @"Expected to load eleven events");
     
 }
+
+/*
+-(void)testOAuth {
+    NSURL *url = [NSURL URLWithString:@"https://www.eventbrite.com/oauth/authorize"];
+    AFOAuth2Client *oauthClient = [AFOAuth2Client clientWithBaseURL:url clientID:kClientID secret:kClientSecret];
+    
+    [oauthClient authenticateUsingOAuthWithPath:@"/oauth/token"
+                                       username:@"username"
+                                       password:@"password"
+                                        success:^(AFOAuthCredential *credential) {
+                                            NSLog(@"I have a token! %@", credential.accessToken);
+                                            [AFOAuthCredential storeCredential:credential withIdentifier:oauthClient.serviceProviderIdentifier];
+                                        }
+                                        failure:^(NSError *error) {
+                                            NSLog(@"Error: %@", error);
+                                        }];
+} */
 
 - (void)tearDown
 {

@@ -94,6 +94,8 @@
 		7A79A22116F92F3B00CA2DDA /* AppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
 		7A79A22216F92F3B00CA2DDA /* AppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
 		7A79A22C16F9415800CA2DDA /* singleEvent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = singleEvent.json; sourceTree = "<group>"; };
+		7A79A3CA16FA01F300CA2DDA /* AFOAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAuth2Client.h; sourceTree = "<group>"; };
+		7A79A3CB16FA01F300CA2DDA /* AFOAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAuth2Client.m; sourceTree = "<group>"; };
 		7ACAF88016F7EF6900CB6591 /* EventbriteChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventbriteChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACAF88316F7EF6900CB6591 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7ACAF88516F7EF6900CB6591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,6 +197,15 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		7A79A3C916FA01F300CA2DDA /* AFOAuth2Client */ = {
+			isa = PBXGroup;
+			children = (
+				7A79A3CA16FA01F300CA2DDA /* AFOAuth2Client.h */,
+				7A79A3CB16FA01F300CA2DDA /* AFOAuth2Client.m */,
+			);
+			path = AFOAuth2Client;
+			sourceTree = "<group>";
+		};
 		7ACAF87716F7EF6900CB6591 = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +296,7 @@
 		7ACAF8C116F7EF7F00CB6591 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				7A79A3C916FA01F300CA2DDA /* AFOAuth2Client */,
 				7ACAFED216F828EA00CB6591 /* JSONKit */,
 				7ACAFEC016F828CA00CB6591 /* RestKit.xcodeproj */,
 				7ACAFE1C16F7F88200CB6591 /* SphereView */,
