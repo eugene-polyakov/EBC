@@ -13,12 +13,22 @@
 #import "ModelMapping.h"
 #import <SenTestingKit/SenTestingKit.h>
 
+
+@interface EventbriteChallengeTests()
+
+@property (nonatomic, strong) NSString * apiKey;
+
+@end
+
+static NSString * const API_KEY_KEY = @"EventBriteAPIKey";
+
 @implementation EventbriteChallengeTests
 
 - (void)setUp
 {
     [super setUp];
     NSBundle *testTargetBundle = [NSBundle bundleForClass:self.class];
+    self.apiKey = [[[NSBundle mainBundle] infoDictionary] objectForKey:API_KEY_KEY];
     [RKTestFixture setFixtureBundle:testTargetBundle];
 }
 
@@ -44,7 +54,7 @@
 	RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[ModelMapping eventMapping] pathPattern:nil keyPath:@"event" statusCodes:[NSIndexSet indexSetWithIndex:200]];
                                                 
                                                 
-	NSURL *URL = [NSURL URLWithString:@"https://www.eventbrite.com/json/event_get?app_key=EHHWMU473LTVEO4JFY&id=4928107101"];
+	NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.eventbrite.com/json/event_get?app_key=%@&id=4928107101", self.apiKey]];
 	NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     RKObjectRequestOperation *requestOperation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ responseDescriptor ]];
 	[requestOperation start];
@@ -55,7 +65,7 @@
 -(void)testMultiEventOperation {
 	RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[ModelMapping eventMapping] pathPattern:nil keyPath:@"events.event" statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
-    	NSURL *URL = [NSURL URLWithString:@"https://www.eventbrite.com/json/event_search?app_key=EHHWMU473LTVEO4JFY"];
+    	NSURL *URL = [NSURL URLWithString:[@"https://www.eventbrite.com/json/event_search?app_key=" stringByAppendingString:self.apiKey]];
 	NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     RKObjectRequestOperation *requestOperation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ responseDescriptor ]];
 	[requestOperation start];

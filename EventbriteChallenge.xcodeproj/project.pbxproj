@@ -639,7 +639,7 @@
 		7ACAF8BC16F7EF6900CB6591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EventBriteAPIKey = 136364820055753884369;
+				EventBriteAPIKey = C2XEXIOL22JPUE2DYQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -668,7 +668,7 @@
 		7ACAF8BD16F7EF6900CB6591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EventBriteAPIKey = 136364820055753884369;
+				EventBriteAPIKey = C2XEXIOL22JPUE2DYQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -698,6 +698,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EventbriteChallenge.app/EventbriteChallenge";
+				EventBriteAPIKey = C2XEXIOL22JPUE2DYQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -727,6 +728,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EventbriteChallenge.app/EventbriteChallenge";
+				EventBriteAPIKey = C2XEXIOL22JPUE2DYQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
