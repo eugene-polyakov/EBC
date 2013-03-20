@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import <RestKit/RestKit.h>
 
 @implementation AppDelegate
 
@@ -23,6 +24,9 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    AFHTTPClient * client = [RKObjectManager sharedManager].HTTPClient;
+    
     return YES;
 }
 

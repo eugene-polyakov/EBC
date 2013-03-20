@@ -10,4 +10,6 @@
 
 @interface EventbriteChallengeTests : SenTestCase
 
+-(void)testSingleEventLoad;
+
 @end

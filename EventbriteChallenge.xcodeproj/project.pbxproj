@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A79A22316F92F3B00CA2DDA /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A79A22216F92F3B00CA2DDA /* AppContext.m */; };
+		7A79A22D16F9415800CA2DDA /* singleEvent.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A79A22C16F9415800CA2DDA /* singleEvent.json */; };
+		7A79A37816F9556900CA2DDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88716F7EF6900CB6591 /* CoreGraphics.framework */; };
 		7ACAF88416F7EF6900CB6591 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88316F7EF6900CB6591 /* UIKit.framework */; };
 		7ACAF88616F7EF6900CB6591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88516F7EF6900CB6591 /* Foundation.framework */; };
 		7ACAF88816F7EF6900CB6591 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88716F7EF6900CB6591 /* CoreGraphics.framework */; };
@@ -25,13 +28,31 @@
 		7ACAF8B516F7EF6900CB6591 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAF8B316F7EF6900CB6591 /* InfoPlist.strings */; };
 		7ACAF8B816F7EF6900CB6591 /* EventbriteChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF8B716F7EF6900CB6591 /* EventbriteChallengeTests.m */; };
 		7ACAFE2A16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7ACAFE2B16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */; };
+		7ACAFE2B16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7ACAFE2C16F7F88F00CB6591 /* PFSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7ACAFE2D16F7F88F00CB6591 /* PFSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */; };
-		7ACAFE3216F80B9900CB6591 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF8AA16F7EF6900CB6591 /* SenTestingKit.framework */; };
+		7ACAFE2D16F7F88F00CB6591 /* PFSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7ACAFEA216F8156E00CB6591 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAFEA116F8156E00CB6591 /* CoreData.framework */; };
+		7ACAFEA416F8159F00CB6591 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAFEA316F8159F00CB6591 /* CFNetwork.framework */; };
+		7ACAFEA616F815EB00CB6591 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAFEA516F815EB00CB6591 /* MobileCoreServices.framework */; };
+		7ACAFEA816F815F000CB6591 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAFEA716F815F000CB6591 /* Security.framework */; };
+		7ACAFEAA16F815F700CB6591 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAFEA916F815F700CB6591 /* SystemConfiguration.framework */; };
+		7ACAFEB916F8276200CB6591 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFEB716F8276200CB6591 /* Model.m */; };
+		7ACAFEBA16F8276200CB6591 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFEB716F8276200CB6591 /* Model.m */; };
+		7ACAFED116F828D800CB6591 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAFEC816F828CA00CB6591 /* libRestKit.a */; };
+		7ACAFED916F828EA00CB6591 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFED516F828EA00CB6591 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7ACAFEDA16F828EA00CB6591 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFED516F828EA00CB6591 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7ACAFEE316F82E1300CB6591 /* ModelMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFEE216F82E1300CB6591 /* ModelMapping.m */; };
+		7ACAFEE416F82E1300CB6591 /* ModelMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFEE216F82E1300CB6591 /* ModelMapping.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7A79A37316F9529200CA2DDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ACAFEC016F828CA00CB6591 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
 		7ACAF8AE16F7EF6900CB6591 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7ACAF87816F7EF6900CB6591 /* Project object */;
@@ -39,9 +60,40 @@
 			remoteGlobalIDString = 7ACAF87F16F7EF6900CB6591;
 			remoteInfo = EventbriteChallenge;
 		};
+		7ACAFEC716F828CA00CB6591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ACAFEC016F828CA00CB6591 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		7ACAFEC916F828CA00CB6591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ACAFEC016F828CA00CB6591 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		7ACAFECB16F828CA00CB6591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ACAFEC016F828CA00CB6591 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		7ACAFECD16F828CA00CB6591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ACAFEC016F828CA00CB6591 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A79A22116F92F3B00CA2DDA /* AppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
+		7A79A22216F92F3B00CA2DDA /* AppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
+		7A79A22C16F9415800CA2DDA /* singleEvent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = singleEvent.json; sourceTree = "<group>"; };
 		7ACAF88016F7EF6900CB6591 /* EventbriteChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventbriteChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACAF88316F7EF6900CB6591 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7ACAF88516F7EF6900CB6591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,6 +126,18 @@
 		7ACAFE2316F7F88F00CB6591 /* PFGoldenSectionSpiral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFGoldenSectionSpiral.m; sourceTree = "<group>"; };
 		7ACAFE2416F7F88F00CB6591 /* PFSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFSphereView.h; sourceTree = "<group>"; };
 		7ACAFE2516F7F88F00CB6591 /* PFSphereView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFSphereView.m; sourceTree = "<group>"; };
+		7ACAFEA116F8156E00CB6591 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7ACAFEA316F8159F00CB6591 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7ACAFEA516F815EB00CB6591 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7ACAFEA716F815F000CB6591 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7ACAFEA916F815F700CB6591 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7ACAFEB716F8276200CB6591 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		7ACAFEB816F8276200CB6591 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		7ACAFEC016F828CA00CB6591 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		7ACAFED416F828EA00CB6591 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		7ACAFED516F828EA00CB6591 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		7ACAFEE116F82E1300CB6591 /* ModelMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelMapping.h; sourceTree = "<group>"; };
+		7ACAFEE216F82E1300CB6591 /* ModelMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelMapping.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +145,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ACAFE3216F80B9900CB6591 /* SenTestingKit.framework in Frameworks */,
+				7ACAFED116F828D800CB6591 /* libRestKit.a in Frameworks */,
+				7ACAFEAA16F815F700CB6591 /* SystemConfiguration.framework in Frameworks */,
+				7ACAFEA816F815F000CB6591 /* Security.framework in Frameworks */,
+				7ACAFEA616F815EB00CB6591 /* MobileCoreServices.framework in Frameworks */,
+				7ACAFEA416F8159F00CB6591 /* CFNetwork.framework in Frameworks */,
+				7ACAFEA216F8156E00CB6591 /* CoreData.framework in Frameworks */,
 				7ACAF88416F7EF6900CB6591 /* UIKit.framework in Frameworks */,
 				7ACAF88616F7EF6900CB6591 /* Foundation.framework in Frameworks */,
 				7ACAF88816F7EF6900CB6591 /* CoreGraphics.framework in Frameworks */,
@@ -95,12 +164,37 @@
 				7ACAF8AB16F7EF6900CB6591 /* SenTestingKit.framework in Frameworks */,
 				7ACAF8AC16F7EF6900CB6591 /* UIKit.framework in Frameworks */,
 				7ACAF8AD16F7EF6900CB6591 /* Foundation.framework in Frameworks */,
+				7A79A37816F9556900CA2DDA /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A79A21D16F92F2500CA2DDA /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				7A79A22116F92F3B00CA2DDA /* AppContext.h */,
+				7A79A22216F92F3B00CA2DDA /* AppContext.m */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		7A79A22A16F9404700CA2DDA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7A79A22B16F9410E00CA2DDA /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				7A79A22C16F9415800CA2DDA /* singleEvent.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		7ACAF87716F7EF6900CB6591 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +218,11 @@
 		7ACAF88216F7EF6900CB6591 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7ACAFEA916F815F700CB6591 /* SystemConfiguration.framework */,
+				7ACAFEA716F815F000CB6591 /* Security.framework */,
+				7ACAFEA516F815EB00CB6591 /* MobileCoreServices.framework */,
+				7ACAFEA316F8159F00CB6591 /* CFNetwork.framework */,
+				7ACAFEA116F8156E00CB6591 /* CoreData.framework */,
 				7ACAF88316F7EF6900CB6591 /* UIKit.framework */,
 				7ACAF88516F7EF6900CB6591 /* Foundation.framework */,
 				7ACAF88716F7EF6900CB6591 /* CoreGraphics.framework */,
@@ -135,6 +234,9 @@
 		7ACAF88916F7EF6900CB6591 /* EventbriteChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				7A79A22A16F9404700CA2DDA /* Controllers */,
+				7A79A21D16F92F2500CA2DDA /* Context */,
+				7ACAFEB616F8275100CB6591 /* Model */,
 				7ACAF89216F7EF6900CB6591 /* AppDelegate.h */,
 				7ACAF89316F7EF6900CB6591 /* AppDelegate.m */,
 				7ACAF89B16F7EF6900CB6591 /* ViewController.h */,
@@ -163,6 +265,7 @@
 		7ACAF8B016F7EF6900CB6591 /* EventbriteChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				7A79A22B16F9410E00CA2DDA /* Fixtures */,
 				7ACAF8B616F7EF6900CB6591 /* EventbriteChallengeTests.h */,
 				7ACAF8B716F7EF6900CB6591 /* EventbriteChallengeTests.m */,
 				7ACAF8B116F7EF6900CB6591 /* Supporting Files */,
@@ -182,6 +285,8 @@
 		7ACAF8C116F7EF7F00CB6591 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				7ACAFED216F828EA00CB6591 /* JSONKit */,
+				7ACAFEC016F828CA00CB6591 /* RestKit.xcodeproj */,
 				7ACAFE1C16F7F88200CB6591 /* SphereView */,
 			);
 			name = lib;
@@ -204,6 +309,37 @@
 			name = SphereView;
 			sourceTree = "<group>";
 		};
+		7ACAFEB616F8275100CB6591 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAFEB816F8276200CB6591 /* Model.h */,
+				7ACAFEB716F8276200CB6591 /* Model.m */,
+				7ACAFEE116F82E1300CB6591 /* ModelMapping.h */,
+				7ACAFEE216F82E1300CB6591 /* ModelMapping.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7ACAFEC116F828CA00CB6591 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAFEC816F828CA00CB6591 /* libRestKit.a */,
+				7ACAFECA16F828CA00CB6591 /* RestKitTests.octest */,
+				7ACAFECC16F828CA00CB6591 /* RestKit.framework */,
+				7ACAFECE16F828CA00CB6591 /* RestKitFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7ACAFED216F828EA00CB6591 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAFED416F828EA00CB6591 /* JSONKit.h */,
+				7ACAFED516F828EA00CB6591 /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +354,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7A79A37416F9529200CA2DDA /* PBXTargetDependency */,
 			);
 			name = EventbriteChallenge;
 			productName = EventbriteChallenge;
@@ -262,6 +399,12 @@
 			mainGroup = 7ACAF87716F7EF6900CB6591;
 			productRefGroup = 7ACAF88116F7EF6900CB6591 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7ACAFEC116F828CA00CB6591 /* Products */;
+					ProjectRef = 7ACAFEC016F828CA00CB6591 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7ACAF87F16F7EF6900CB6591 /* EventbriteChallenge */,
@@ -269,6 +412,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7ACAFEC816F828CA00CB6591 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 7ACAFEC716F828CA00CB6591 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7ACAFECA16F828CA00CB6591 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 7ACAFEC916F828CA00CB6591 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7ACAFECC16F828CA00CB6591 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 7ACAFECB16F828CA00CB6591 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7ACAFECE16F828CA00CB6591 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 7ACAFECD16F828CA00CB6591 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7ACAF87E16F7EF6900CB6591 /* Resources */ = {
@@ -289,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ACAF8B516F7EF6900CB6591 /* InfoPlist.strings in Resources */,
+				7A79A22D16F9415800CA2DDA /* singleEvent.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +495,10 @@
 				7ACAF89D16F7EF6900CB6591 /* ViewController.m in Sources */,
 				7ACAFE2A16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */,
 				7ACAFE2C16F7F88F00CB6591 /* PFSphereView.m in Sources */,
+				7ACAFEB916F8276200CB6591 /* Model.m in Sources */,
+				7ACAFED916F828EA00CB6591 /* JSONKit.m in Sources */,
+				7ACAFEE316F82E1300CB6591 /* ModelMapping.m in Sources */,
+				7A79A22316F92F3B00CA2DDA /* AppContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,12 +509,20 @@
 				7ACAF8B816F7EF6900CB6591 /* EventbriteChallengeTests.m in Sources */,
 				7ACAFE2B16F7F88F00CB6591 /* PFGoldenSectionSpiral.m in Sources */,
 				7ACAFE2D16F7F88F00CB6591 /* PFSphereView.m in Sources */,
+				7ACAFEBA16F8276200CB6591 /* Model.m in Sources */,
+				7ACAFEDA16F828EA00CB6591 /* JSONKit.m in Sources */,
+				7ACAFEE416F82E1300CB6591 /* ModelMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7A79A37416F9529200CA2DDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 7A79A37316F9529200CA2DDA /* PBXContainerItemProxy */;
+		};
 		7ACAF8AF16F7EF6900CB6591 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7ACAF87F16F7EF6900CB6591 /* EventbriteChallenge */;
@@ -440,20 +627,28 @@
 		7ACAF8BC16F7EF6900CB6591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EventBriteAPIKey = 136364820055753884369;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/EventBriteChallenge/lib/SphereView\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/EventBriteChallenge/lib/SphereView\"",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+				);
 				INFOPLIST_FILE = "EventbriteChallenge/EventbriteChallenge-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
 				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/EventBriteChallenge/lib/OCMock\"";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -461,20 +656,28 @@
 		7ACAF8BD16F7EF6900CB6591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EventBriteAPIKey = 136364820055753884369;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/EventBriteChallenge/lib/SphereView\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/EventBriteChallenge/lib/SphereView\"",
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+				);
 				INFOPLIST_FILE = "EventbriteChallenge/EventbriteChallenge-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
 				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/EventBriteChallenge/lib/OCMock\"";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -489,10 +692,18 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
 				INFOPLIST_FILE = "EventbriteChallengeTests/EventbriteChallengeTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
+					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock\"",
+					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock/Examples/iOS5Example/usr/lib\"",
+					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock/Examples/iPhoneExample/Libraries\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -510,10 +721,18 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
 				INFOPLIST_FILE = "EventbriteChallengeTests/EventbriteChallengeTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
+					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock\"",
+					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock/Examples/iOS5Example/usr/lib\"",
+					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock/Examples/iPhoneExample/Libraries\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

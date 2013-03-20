@@ -160,7 +160,7 @@
 		return;
 	}
 	
-	PFAxisDirection rotationDirection;
+	PFAxisDirection rotationDirection = PFAxisDirectionPositive;
 	
 	CGFloat rotation = rotationRecognizer.rotation;
 	
