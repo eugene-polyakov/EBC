@@ -14,21 +14,22 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 
-@interface EventbriteChallengeTests()
-
-@property (nonatomic, strong) NSString * apiKey;
-
-@end
-
+static NSString * apiKey;
 static NSString * const API_KEY_KEY = @"EventBriteAPIKey";
 
 @implementation EventbriteChallengeTests
+
++(NSString*)apiKey {
+    if (!apiKey) {
+        apiKey = [[[NSBundle mainBundle] infoDictionary] objectForKey:API_KEY_KEY];
+    }
+    return apiKey;
+}
 
 - (void)setUp
 {
     [super setUp];
     NSBundle *testTargetBundle = [NSBundle bundleForClass:self.class];
-    self.apiKey = [[[NSBundle mainBundle] infoDictionary] objectForKey:API_KEY_KEY];
     [RKTestFixture setFixtureBundle:testTargetBundle];
 }
 
@@ -54,7 +55,7 @@ static NSString * const API_KEY_KEY = @"EventBriteAPIKey";
 	RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[ModelMapping eventMapping] pathPattern:nil keyPath:@"event" statusCodes:[NSIndexSet indexSetWithIndex:200]];
                                                 
                                                 
-	NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.eventbrite.com/json/event_get?app_key=%@&id=4928107101", self.apiKey]];
+	NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.eventbrite.com/json/event_get?app_key=%@&id=4928107101", [EventbriteChallengeTests apiKey]]];
 	NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     RKObjectRequestOperation *requestOperation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ responseDescriptor ]];
 	[requestOperation start];
@@ -65,7 +66,7 @@ static NSString * const API_KEY_KEY = @"EventBriteAPIKey";
 -(void)testMultiEventOperation {
 	RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[ModelMapping eventMapping] pathPattern:nil keyPath:@"events.event" statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
-    	NSURL *URL = [NSURL URLWithString:[@"https://www.eventbrite.com/json/event_search?app_key=" stringByAppendingString:self.apiKey]];
+    	NSURL *URL = [NSURL URLWithString:[@"https://www.eventbrite.com/json/event_search?app_key=" stringByAppendingString:[EventbriteChallengeTests apiKey]]];
 	NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     RKObjectRequestOperation *requestOperation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ responseDescriptor ]];
 	[requestOperation start];
@@ -74,22 +75,6 @@ static NSString * const API_KEY_KEY = @"EventBriteAPIKey";
     
 }
 
-/*
--(void)testOAuth {
-    NSURL *url = [NSURL URLWithString:@"https://www.eventbrite.com/oauth/authorize"];
-    AFOAuth2Client *oauthClient = [AFOAuth2Client clientWithBaseURL:url clientID:kClientID secret:kClientSecret];
-    
-    [oauthClient authenticateUsingOAuthWithPath:@"/oauth/token"
-                                       username:@"username"
-                                       password:@"password"
-                                        success:^(AFOAuthCredential *credential) {
-                                            NSLog(@"I have a token! %@", credential.accessToken);
-                                            [AFOAuthCredential storeCredential:credential withIdentifier:oauthClient.serviceProviderIdentifier];
-                                        }
-                                        failure:^(NSError *error) {
-                                            NSLog(@"Error: %@", error);
-                                        }];
-} */
 
 - (void)tearDown
 {

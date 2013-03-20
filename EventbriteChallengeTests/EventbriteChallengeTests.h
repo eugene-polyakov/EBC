@@ -10,4 +10,6 @@
 
 @interface EventbriteChallengeTests : SenTestCase
 
++(NSString*)apiKey;
+
 @end

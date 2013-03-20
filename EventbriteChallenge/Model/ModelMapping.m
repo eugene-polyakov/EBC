@@ -81,7 +81,7 @@
     [eventMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"venue" toKeyPath:@"venue" withMapping:[self venueMapping]]];
     [eventMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"organizer" toKeyPath:@"organizer" withMapping:[self organizerMapping]]];
     RKObjectMapping * ticketMapping = [self ticketMapping];
-//    [eventMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"event.tickets" toKeyPath:@"tickets" withMapping:ticketMapping]];
+    [eventMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"event.tickets" toKeyPath:@"tickets" withMapping:ticketMapping]];
     return eventMapping;
 }
 

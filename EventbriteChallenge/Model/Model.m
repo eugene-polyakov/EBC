@@ -9,24 +9,37 @@
 
 @implementation Organizer
 
+-(NSString*)description {
+    return [NSString stringWithFormat:@"Organizer : %@", self.name];
+}
 
 @end
 
 
 @implementation Ticket
 
-
+-(NSString*)description {
+    return [NSString stringWithFormat:@"Ticket : %@", self.name];
+}
 
 @end
 
 
 
 @implementation Venue
+
+-(NSString*)description {
+    return [NSString stringWithFormat:@"Venue : %@", self.name];
+}
+
 @end
 
 
 @implementation Event
 
+-(NSString*)description {
+    return [NSString stringWithFormat:@"Event : %@", self.title];
+}
 
 @end
 

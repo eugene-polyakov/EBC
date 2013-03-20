@@ -25,8 +25,6 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    AFHTTPClient * client = [RKObjectManager sharedManager].HTTPClient;
-    
     return YES;
 }
 

@@ -23,10 +23,8 @@
 
 -(id)init {
     if (self == [super init]) {
-        RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
-        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-        NSURL *baseURL = [NSURL URLWithString:@"https://eventbrite.com"];
+        NSURL *baseURL = [NSURL URLWithString:@"https://www.eventbrite.com"];
 
         AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
         [client setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
@@ -34,11 +32,14 @@
 
         RKObjectMapping *mapping = [ModelMapping eventMapping];
         
-        RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping
-                                                                                           pathPattern:@"/json/event_get"
-                                                                                               keyPath:nil
-                                                                                           statusCodes:[NSIndexSet indexSetWithIndex:200]];
+        RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:@"/json/event_get" keyPath:@"event" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+        
         [objectManager addResponseDescriptor:responseDescriptor];
+
+        RKResponseDescriptor *responseDescriptor2 = [RKResponseDescriptor responseDescriptorWithMapping:[ModelMapping eventMapping] pathPattern:@"/json/event_search" keyPath:@"events.event" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+
+        [objectManager addResponseDescriptor:responseDescriptor2];
+
 
     }
     return self;

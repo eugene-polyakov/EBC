@@ -10,6 +10,9 @@
 		7A79A22316F92F3B00CA2DDA /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A79A22216F92F3B00CA2DDA /* AppContext.m */; };
 		7A79A22D16F9415800CA2DDA /* singleEvent.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A79A22C16F9415800CA2DDA /* singleEvent.json */; };
 		7A79A37816F9556900CA2DDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88716F7EF6900CB6591 /* CoreGraphics.framework */; };
+		7A79A3D816FA0B4500CA2DDA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAFEA716F815F000CB6591 /* Security.framework */; };
+		7A79A3D916FA0E0200CA2DDA /* AFOAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A79A3CB16FA01F300CA2DDA /* AFOAuth2Client.m */; };
+		7A79A3DC16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A79A3DB16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.m */; };
 		7ACAF88416F7EF6900CB6591 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88316F7EF6900CB6591 /* UIKit.framework */; };
 		7ACAF88616F7EF6900CB6591 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88516F7EF6900CB6591 /* Foundation.framework */; };
 		7ACAF88816F7EF6900CB6591 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAF88716F7EF6900CB6591 /* CoreGraphics.framework */; };
@@ -96,6 +99,8 @@
 		7A79A22C16F9415800CA2DDA /* singleEvent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = singleEvent.json; sourceTree = "<group>"; };
 		7A79A3CA16FA01F300CA2DDA /* AFOAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAuth2Client.h; sourceTree = "<group>"; };
 		7A79A3CB16FA01F300CA2DDA /* AFOAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAuth2Client.m; sourceTree = "<group>"; };
+		7A79A3DA16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventbriteChallengeContextTests.h; sourceTree = "<group>"; };
+		7A79A3DB16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventbriteChallengeContextTests.m; sourceTree = "<group>"; };
 		7ACAF88016F7EF6900CB6591 /* EventbriteChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventbriteChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACAF88316F7EF6900CB6591 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7ACAF88516F7EF6900CB6591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -147,9 +152,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ACAFEA816F815F000CB6591 /* Security.framework in Frameworks */,
 				7ACAFED116F828D800CB6591 /* libRestKit.a in Frameworks */,
 				7ACAFEAA16F815F700CB6591 /* SystemConfiguration.framework in Frameworks */,
-				7ACAFEA816F815F000CB6591 /* Security.framework in Frameworks */,
 				7ACAFEA616F815EB00CB6591 /* MobileCoreServices.framework in Frameworks */,
 				7ACAFEA416F8159F00CB6591 /* CFNetwork.framework in Frameworks */,
 				7ACAFEA216F8156E00CB6591 /* CoreData.framework in Frameworks */,
@@ -167,6 +172,7 @@
 				7ACAF8AC16F7EF6900CB6591 /* UIKit.framework in Frameworks */,
 				7ACAF8AD16F7EF6900CB6591 /* Foundation.framework in Frameworks */,
 				7A79A37816F9556900CA2DDA /* CoreGraphics.framework in Frameworks */,
+				7A79A3D816FA0B4500CA2DDA /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +286,8 @@
 				7ACAF8B616F7EF6900CB6591 /* EventbriteChallengeTests.h */,
 				7ACAF8B716F7EF6900CB6591 /* EventbriteChallengeTests.m */,
 				7ACAF8B116F7EF6900CB6591 /* Supporting Files */,
+				7A79A3DA16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.h */,
+				7A79A3DB16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.m */,
 			);
 			path = EventbriteChallengeTests;
 			sourceTree = "<group>";
@@ -511,6 +519,7 @@
 				7ACAFED916F828EA00CB6591 /* JSONKit.m in Sources */,
 				7ACAFEE316F82E1300CB6591 /* ModelMapping.m in Sources */,
 				7A79A22316F92F3B00CA2DDA /* AppContext.m in Sources */,
+				7A79A3D916FA0E0200CA2DDA /* AFOAuth2Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +533,7 @@
 				7ACAFEBA16F8276200CB6591 /* Model.m in Sources */,
 				7ACAFEDA16F828EA00CB6591 /* JSONKit.m in Sources */,
 				7ACAFEE416F82E1300CB6591 /* ModelMapping.m in Sources */,
+				7A79A3DC16FA0F4C00CA2DDA /* EventbriteChallengeContextTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +613,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -628,6 +639,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -649,12 +661,10 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/EventBriteChallenge/lib/SphereView\"",
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+					"\"$(SRCROOT)/EventBriteChallenge/lib/RestKit/Vendor/AFNetworking/AFNetworking\"",
 				);
 				INFOPLIST_FILE = "EventbriteChallenge/EventbriteChallenge-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -678,12 +688,10 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/EventBriteChallenge/lib/SphereView\"",
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+					"\"$(SRCROOT)/EventBriteChallenge/lib/RestKit/Vendor/AFNetworking/AFNetworking\"",
 				);
 				INFOPLIST_FILE = "EventbriteChallenge/EventbriteChallenge-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -705,15 +713,9 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "EventbriteChallengeTests/EventbriteChallengeTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
-					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock\"",
-					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock/Examples/iOS5Example/usr/lib\"",
-					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock/Examples/iPhoneExample/Libraries\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -735,15 +737,9 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EventbriteChallenge/EventbriteChallenge-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "EventbriteChallengeTests/EventbriteChallengeTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/EventbriteChallenge/lib\"",
-					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock\"",
-					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock/Examples/iOS5Example/usr/lib\"",
-					"\"$(SRCROOT)/EventbriteChallenge/lib/OCMock/Examples/iPhoneExample/Libraries\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
