@@ -8,8 +8,6 @@
 
 #import "TagCloudViewController.h"
 #import <CoreMotion/CoreMotion.h>
-#import "vector.h"
-#import "vector_inline_implementation.h"
 
 @implementation TagCloudViewController (Sensors)
 
