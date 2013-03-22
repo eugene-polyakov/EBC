@@ -84,7 +84,7 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
           [hud hide:YES];
           
           [self.tagView removeAll];
-          
+          [self addClouds:4];
           int maxCount = 0;
           NSDictionary * dic = [DataUtils groupedDictionaryOfEvents:mappingResult.array maxCount:&maxCount];
           self.data = [dic mutableCopy];
