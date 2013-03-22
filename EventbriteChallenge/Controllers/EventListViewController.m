@@ -50,6 +50,8 @@
     return cell;
 }
 
+
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [EventCell height];
 }

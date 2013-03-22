@@ -24,6 +24,11 @@
 static UINib * __nib;
 static NSDateFormatter * __fmt;
 
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    [self adjustFrames];
+}
+
 -(NSString*)formatDate:(NSDate*)date {
     if (!__fmt) {
         __fmt = [[NSDateFormatter alloc] init];
@@ -50,15 +55,19 @@ static NSDateFormatter * __fmt;
         [self.spinner stopAnimating];
     }];
     [op start];
-    CGSize size = [event.title sizeWithFont:self.eventTitleLabel.font constrainedToSize:CGSizeMake(self.eventTitleLabel.frame.size.width, self.frame.size.height - self.eventDateLabel.frame.size.height - 5 - self.eventTitleLabel.frame.origin.y) lineBreakMode:self.eventTitleLabel.lineBreakMode];
+    self.eventTitleLabel.text = event.title;
+    self.eventDateLabel.text = [self formatDate:event.startDate];
+    [self adjustFrames];
+}
+
+-(void)adjustFrames {
+    CGSize size = [self.eventTitleLabel.text sizeWithFont:self.eventTitleLabel.font constrainedToSize:CGSizeMake(self.eventTitleLabel.frame.size.width, self.frame.size.height - self.eventDateLabel.frame.size.height - 5 - self.eventTitleLabel.frame.origin.y) lineBreakMode:self.eventTitleLabel.lineBreakMode];
     CGRect f = self.eventTitleLabel.frame;
     f.size.height = size.height;
     self.eventTitleLabel.frame = f;
-    self.eventTitleLabel.text = event.title;
     CGRect f1 = self.eventDateLabel.frame;
     f1.origin.y = CGRectGetMaxY(f) + 5;
     self.eventDateLabel.frame = f1;
-    self.eventDateLabel.text = [self formatDate:event.startDate];
 }
 
 +(CGFloat)height {
