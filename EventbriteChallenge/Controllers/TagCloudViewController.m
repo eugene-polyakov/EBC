@@ -15,6 +15,7 @@
 #import "DataUtils.h"
 #import "TagCloudView.h"
 #import "TagView.h"
+#import "HintManager.h"
 
 @interface TagCloudViewController () <CLLocationManagerDelegate, UIAlertViewDelegate>
 
@@ -68,7 +69,10 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
     [hud show:YES];
     [self.view addSubview:hud];
     NSMutableDictionary * params = [AppCTX parametersDictionaryWithAPIKey];
-    [params setObject:@"30" forKey:@"limit"];
+    [params setObject:@"15" forKey:@"max"];
+    [params setObject:[NSNumber numberWithDouble:self.lastKnownLocation.coordinate.latitude] forKey:@"latitude"];
+    [params setObject:[NSNumber numberWithDouble:self.lastKnownLocation.coordinate.longitude] forKey:@"longitude"];
+    [params setObject:@"20" forKey:@"within"];
     
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/json/event_search" parameters:
                                               params
@@ -87,6 +91,8 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
               int z = maxCount / events.count;
               [self addViewForTag:key z:z];
           }
+          
+          [HintManager showHint:NSLocalizedString(@"Try to tilt\nyour device !", nil) inView:self.view afterDelay:2. key:@"tilt"];
           
       } failure:^(RKObjectRequestOperation *operation, NSError *error) {
           [hud hide:YES];

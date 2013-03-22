@@ -45,7 +45,7 @@ static BOOL shake(UIAcceleration* last, UIAcceleration* current, double threshol
 }
 
 - (void) accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
-    if (shake(__last, acceleration, .7)) {
+    if (shake(__last, acceleration, .9)) {
         [self.tagView runAway];
     }
 }

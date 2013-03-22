@@ -79,6 +79,9 @@
 		7ACAFEDA16F828EA00CB6591 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFED516F828EA00CB6591 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7ACAFEE316F82E1300CB6591 /* ModelMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFEE216F82E1300CB6591 /* ModelMapping.m */; };
 		7ACAFEE416F82E1300CB6591 /* ModelMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAFEE216F82E1300CB6591 /* ModelMapping.m */; };
+		7AF3AFFA16FCA76A007C0067 /* callout.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7AF3AFF916FCA76A007C0067 /* callout.pdf */; };
+		7AF3AFFD16FCA7AC007C0067 /* HintManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF3AFFC16FCA7AC007C0067 /* HintManager.m */; };
+		7AF3B00516FCA868007C0067 /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF3B00416FCA868007C0067 /* NSTimer+Blocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +220,11 @@
 		7ACAFED516F828EA00CB6591 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		7ACAFEE116F82E1300CB6591 /* ModelMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelMapping.h; sourceTree = "<group>"; };
 		7ACAFEE216F82E1300CB6591 /* ModelMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelMapping.m; sourceTree = "<group>"; };
+		7AF3AFF916FCA76A007C0067 /* callout.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = callout.pdf; sourceTree = "<group>"; };
+		7AF3AFFB16FCA7AC007C0067 /* HintManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintManager.h; sourceTree = "<group>"; };
+		7AF3AFFC16FCA7AC007C0067 /* HintManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintManager.m; sourceTree = "<group>"; };
+		7AF3B00316FCA868007C0067 /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
+		7AF3B00416FCA868007C0067 /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +298,7 @@
 		7A0816A216FBFF2900DBC505 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7AF3AFF916FCA76A007C0067 /* callout.pdf */,
 				7A0816BA16FC040900DBC505 /* back.jpg */,
 				7A0816BB16FC040900DBC505 /* back@2x.jpg */,
 				7A0816A516FBFF2900DBC505 /* cloud1_.pdf */,
@@ -392,6 +401,8 @@
 				7A7EFEB716FA1A30005DA4BA /* KeyUtils.m */,
 				7A08169616FBD11700DBC505 /* DataUtils.h */,
 				7A08169716FBD11700DBC505 /* DataUtils.m */,
+				7AF3AFFB16FCA7AC007C0067 /* HintManager.h */,
+				7AF3AFFC16FCA7AC007C0067 /* HintManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -496,6 +507,8 @@
 		7ACAF8C116F7EF7F00CB6591 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				7AF3B00316FCA868007C0067 /* NSTimer+Blocks.h */,
+				7AF3B00416FCA868007C0067 /* NSTimer+Blocks.m */,
 				7A0816A916FBFF5C00DBC505 /* UIImage+PDF */,
 				7A08168C16FBC8D600DBC505 /* MBProgressHUD.h */,
 				7A08168D16FBC8D600DBC505 /* MBProgressHUD.m */,
@@ -670,6 +683,7 @@
 				7A04799216FC369000D71C2A /* Icon-57.png in Resources */,
 				7A04799316FC369000D71C2A /* Icon-72.png in Resources */,
 				7A04799416FC369000D71C2A /* iTunesArtwork in Resources */,
+				7AF3AFFA16FCA76A007C0067 /* callout.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +740,8 @@
 				7A0816C616FC05CB00DBC505 /* CloudView.m in Sources */,
 				7A0816E316FC2B7D00DBC505 /* TagCloudViewController+Graphics.m in Sources */,
 				7A0816E816FC31F100DBC505 /* TagCloudViewController+Sensors.m in Sources */,
+				7AF3AFFD16FCA7AC007C0067 /* HintManager.m in Sources */,
+				7AF3B00516FCA868007C0067 /* NSTimer+Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
