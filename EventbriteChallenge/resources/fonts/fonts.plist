@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>font1.ttf</key>
+	<string>FeastofFleshBB</string>
+	<key>font2.ttf</key>
+	<string>HandOfSean</string>
+	<key>font3.ttf</key>
+	<string>Lightattheend</string>
+	<key>font4.ttf</key>
+	<string>BrainFlower</string>
+	<key>font5.ttf</key>
+	<string>KatyBerry</string>
+	<key>font6.ttf</key>
+	<string>DoktorTerror</string>
+</dict>
+</plist>

@@ -22,9 +22,10 @@
     }
 }
 
-+(NSDictionary*)groupedDictionaryOfEvents:(NSArray*)events {
++(NSDictionary*)groupedDictionaryOfEvents:(NSArray*)events maxCount:(int*)maxCount {
     // Of course, real implementation will have CoreData store and this will be done as SQL query
     NSMutableDictionary * ret = [NSMutableDictionary new];
+    __block int _maxCount = 0;
     [events enumerateObjectsUsingBlock:^(Event * event, NSUInteger idx, BOOL *stop) {
         for (NSString * tag in [self tagsFromEvent:event]) {
             NSMutableSet * eventsForTag = [ret objectForKey:tag];
@@ -33,8 +34,10 @@
                 [ret setObject:eventsForTag forKey:tag];
             }
             [eventsForTag addObject:event];
+            if (_maxCount < eventsForTag.count) { _maxCount = eventsForTag.count; }
         }
     }];
+    *maxCount = _maxCount;
     return ret;
 }
 

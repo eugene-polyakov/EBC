@@ -13,14 +13,15 @@
 #import "MBProgressHUD.h"
 #import "Model.h"
 #import "DataUtils.h"
+#import "TagCloudView.h"
+#import "TagView.h"
 
 @interface TagCloudViewController () <CLLocationManagerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) CLLocation * lastKnownLocation;
 @property (nonatomic, strong) CLLocationManager * locationManager;
 @property (nonatomic, strong) UIAlertView * alertView;
-
-@property (nonatomic, strong) IBOutlet PFSphereView * sphereView;
+@property (nonatomic, strong) NSMutableDictionary * data;
 
 @end
 
@@ -49,6 +50,8 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
 {
     [super viewDidLoad];
     [self locate];
+    [self addClouds:3];
+    [self startTracking];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,6 +68,7 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
     [hud show:YES];
     [self.view addSubview:hud];
     NSMutableDictionary * params = [AppCTX parametersDictionaryWithAPIKey];
+    [params setObject:@"30" forKey:@"limit"];
     
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/json/event_search" parameters:
                                               params
@@ -72,28 +76,17 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
 
           [hud hide:YES];
           
-          NSDictionary * dic = [DataUtils groupedDictionaryOfEvents:mappingResult.array];
-          
-          NSMutableArray *labels = [[NSMutableArray alloc] init];
-          
+          int maxCount = 0;
+          NSDictionary * dic = [DataUtils groupedDictionaryOfEvents:mappingResult.array maxCount:&maxCount];
+          self.data = dic;
+                    
           for (id key in dic.allKeys) {
-              UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
               NSSet * events = [dic objectForKey:key];
-              btn.backgroundColor = [UIColor clearColor];
-              
-              UIFont * font = [UIFont systemFontOfSize:10+events.count * 2];
-              
-              [btn.titleLabel setFont:font];
-              [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-              [btn setTitle:key forState:UIControlStateNormal];
-              [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-              CGSize size = [key sizeWithFont:font];
-              btn.frame = CGRectMake(0, 0, size.width, size.height);
-              [labels addObject:btn];
+              int z = maxCount / events.count;
+              [self addViewForTag:key z:z];
+
           }
           
-          [self.sphereView setItems:labels];
-
       } failure:^(RKObjectRequestOperation *operation, NSError *error) {
           [hud hide:YES];
           NSLog(@"Not OK");
@@ -111,7 +104,7 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     NSString * title = NSLocalizedString(@"Cannot determine location", nil);
-    NSString * msg = NSLocalizedString(@"Let's assume you're at 651 Brannan St", nil);
+    NSString * msg = NSLocalizedString(@"Let's assume you're at\n651 Brannan St", nil);
     if (!self.alertView) {
         self.alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
         [self.alertView show];
@@ -127,6 +120,15 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
         [self locationUpdateComplete];
     }
     [manager stopUpdatingLocation];
+}
+
+-(void)buttonTap:(TagView*)tagView {
+    NSString * tag = tagView.tagName;
+    NSSet * events = [self.data objectForKey:tag];
+}
+
+-(void)dealloc {
+    [self stopTracking];
 }
 
 @end

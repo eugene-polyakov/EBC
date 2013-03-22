@@ -12,6 +12,6 @@
 @interface DataUtils : NSObject
 
 +(NSArray*)tagsFromEvent:(Event*)event;
-+(NSDictionary*)groupedDictionaryOfEvents:(NSArray*)events;
++(NSDictionary*)groupedDictionaryOfEvents:(NSArray*)events maxCount:(int*)maxCount;
 
 @end

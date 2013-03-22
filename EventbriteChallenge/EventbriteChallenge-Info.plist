@@ -26,6 +26,14 @@
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>font1.ttf</string>
+		<string>font2.ttf</string>
+		<string>font3.ttf</string>
+		<string>font4.ttf</string>
+		<string>font5.ttf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
