@@ -45,7 +45,7 @@ static AVAudioPlayer * __player;
     [v addTarget:self action:@selector(releaseLock) forControlEvents:UIControlEventTouchUpOutside];
     [v setTitleColor:[UIColor colorWithHue:arc4random_uniform(255)/255. saturation:.7 brightness:.5 alpha:MAX(1./z, .7)] forState:UIControlStateNormal];
     [v setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    float fontSize = MAX(50-z*3., 10);
+    float fontSize = MAX(self.view.frame.size.height / 15 + 10 -z*3., 10);
     int fontNo = arc4random_uniform(__fonts.count);
     UIFont * font = [UIFont fontWithName:[__fonts objectAtIndex:fontNo] size:fontSize];
     [v.titleLabel setFont:font];
