@@ -1,6 +1,0 @@
-[submodule "EventbriteChallenge/lib/JSONKit"]
-	path = EventbriteChallenge/lib/JSONKit
-	url = https://github.com/johnezang/JSONKit/
-[submodule "EventbriteChallenge/lib/RestKit"]
-	path = EventbriteChallenge/lib/RestKit
-	url = git://github.com/RestKit/RestKit.git
