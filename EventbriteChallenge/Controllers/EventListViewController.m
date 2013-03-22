@@ -38,10 +38,6 @@
     return self.events.count;
 }
 
--(void)layoutSubviews {
-    
-}
-
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     Event * event = [self.events objectAtIndex:indexPath.row];
     EventCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -62,10 +58,7 @@
 {
     [super viewDidLoad];
     self.tableView.tableHeaderView = self.tagView;
-    CGPoint ctr = self.backButton.center;
-    ctr.y = self.tagView.frame.size.height / 2;
-    ctr.x = ctr.y;
-    self.backButton.center = ctr;
+    self.backButton.frame = CGRectMake(0, 0, self.tagView.frame.size.height, self.tagView.frame.size.height);
     [self.tagView addSubview:self.backButton];
 }
 
