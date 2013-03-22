@@ -41,4 +41,25 @@
                                  beforeDate:[NSDate dateWithTimeIntervalSinceNow:10]];
 }
 
+-(void)testLoadMultipleWithContextKey {
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    RKObjectManager * manager = [RKObjectManager sharedManager];
+    
+    [manager getObjectsAtPath:@"/json/event_search" parameters:[[AppContext sharedInstance] parametersDictionaryWithAPIKey] success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
+     {
+         NSLog(@"It Worked: %@", [mappingResult array]);
+         dispatch_semaphore_signal(semaphore);
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+         NSLog(@"It Failed: %@", error);
+         dispatch_semaphore_signal(semaphore);
+         STAssertTrue(NO, @"Operation failed with error - %@", error);
+     }];
+    
+    while (dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW))
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
+                                 beforeDate:[NSDate dateWithTimeIntervalSinceNow:10]];
+}
+
+
 @end

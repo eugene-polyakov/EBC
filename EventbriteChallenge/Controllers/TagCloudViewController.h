@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PFSphereView.h"
 
 @interface TagCloudViewController : UIViewController
 

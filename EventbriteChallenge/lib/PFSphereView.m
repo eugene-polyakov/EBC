@@ -29,25 +29,34 @@
 
 @implementation PFSphereView
 
+-(void)addRecognizers {
+    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    panRecognizer.minimumNumberOfTouches = 1;
+    [self addGestureRecognizer:panRecognizer];
+    [panRecognizer release];
+    
+    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
+    [self addGestureRecognizer:pinchRecognizer];
+    [pinchRecognizer release];
+    
+    UIRotationGestureRecognizer *rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotationGesture:)];
+    [self addGestureRecognizer:rotationRecognizer];
+    [rotationRecognizer release];
+    
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    [self addGestureRecognizer:tapRecognizer];
+    [tapRecognizer release];
+
+}
+
+-(void)awakeFromNib {
+    [self addRecognizers];
+}
+
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
-		UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-		panRecognizer.minimumNumberOfTouches = 1;
-		[self addGestureRecognizer:panRecognizer];
-		[panRecognizer release];
-		
-		UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
-		[self addGestureRecognizer:pinchRecognizer];
-		[pinchRecognizer release];
-		
-		UIRotationGestureRecognizer *rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotationGesture:)];
-		[self addGestureRecognizer:rotationRecognizer];
-		[rotationRecognizer release];
-		
-		UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
-		tapRecognizer.numberOfTapsRequired = 1;
-		[self addGestureRecognizer:tapRecognizer];
-		[tapRecognizer release];
+        [self addRecognizers];
     }
     return self;
 }

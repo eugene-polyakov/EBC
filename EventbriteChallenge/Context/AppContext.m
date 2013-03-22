@@ -60,4 +60,8 @@ static NSString * apiKey;
     return apiKey;
 }
 
+-(NSMutableDictionary*)parametersDictionaryWithAPIKey {
+    return [NSMutableDictionary dictionaryWithObjectsAndKeys:[self apiKey], @"app_key", nil];
+}
+
 @end

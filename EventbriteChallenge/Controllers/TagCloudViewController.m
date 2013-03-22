@@ -7,32 +7,126 @@
 //
 
 #import "TagCloudViewController.h"
+#import <CoreLocation/CoreLocation.h>
+#import <RestKit/RestKit.h>
+#import "AppContext.h"
+#import "MBProgressHUD.h"
+#import "Model.h"
+#import "DataUtils.h"
 
-@interface TagCloudViewController ()
+@interface TagCloudViewController () <CLLocationManagerDelegate, UIAlertViewDelegate>
+
+@property (nonatomic, strong) CLLocation * lastKnownLocation;
+@property (nonatomic, strong) CLLocationManager * locationManager;
+@property (nonatomic, strong) UIAlertView * alertView;
+
+@property (nonatomic, strong) IBOutlet PFSphereView * sphereView;
 
 @end
 
 @implementation TagCloudViewController
 
+static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
+}
+
+
+-(void)locate {
+    self.locationManager = [CLLocationManager new];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+    [self.locationManager startUpdatingLocation];
+    [self.locationManager startMonitoringSignificantLocationChanges];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self locate];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)locationUpdateComplete {
+    MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
+	hud.labelText = NSLocalizedString(@"Loading data...", nil);
+	hud.taskInProgress = YES;
+	hud.graceTime = 0.1;
+    [hud show:YES];
+    [self.view addSubview:hud];
+    NSMutableDictionary * params = [AppCTX parametersDictionaryWithAPIKey];
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"/json/event_search" parameters:
+                                              params
+      success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+
+          [hud hide:YES];
+          
+          NSDictionary * dic = [DataUtils groupedDictionaryOfEvents:mappingResult.array];
+          
+          NSMutableArray *labels = [[NSMutableArray alloc] init];
+          
+          for (id key in dic.allKeys) {
+              UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+              NSSet * events = [dic objectForKey:key];
+              btn.backgroundColor = [UIColor clearColor];
+              
+              UIFont * font = [UIFont systemFontOfSize:10+events.count * 2];
+              
+              [btn.titleLabel setFont:font];
+              [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+              [btn setTitle:key forState:UIControlStateNormal];
+              [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+              CGSize size = [key sizeWithFont:font];
+              btn.frame = CGRectMake(0, 0, size.width, size.height);
+              [labels addObject:btn];
+          }
+          
+          [self.sphereView setItems:labels];
+
+      } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+          [hud hide:YES];
+          NSLog(@"Not OK");
+      }];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    self.lastKnownLocation = [[CLLocation alloc] initWithCoordinate:CLLocationCoordinate2DMake(37.775192,-122.399776) altitude:0 horizontalAccuracy:0 verticalAccuracy:0 course:0 speed:0 timestamp:[NSDate date]];
+    [self locationUpdateComplete];
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSString * title = NSLocalizedString(@"Cannot determine location", nil);
+    NSString * msg = NSLocalizedString(@"Let's assume you're at 651 Brannan St", nil);
+    if (!self.alertView) {
+        self.alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+        [self.alertView show];
+    }
+    [manager stopUpdatingLocation];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation * latest = [locations objectAtIndex:0];
+    // Let's protect from too frequent updates. once per minute max
+    if ([latest.timestamp timeIntervalSinceDate:self.lastKnownLocation.timestamp] >= MIN_LOCATION_INTERVAL) {
+        self.lastKnownLocation = [locations objectAtIndex:0];
+        [self locationUpdateComplete];
+    }
+    [manager stopUpdatingLocation];
 }
 
 @end

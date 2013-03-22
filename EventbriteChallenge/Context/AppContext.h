@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#define AppCTX [AppContext sharedInstance]
+
 @interface AppContext : NSObject
 
 +(AppContext*)sharedInstance;
 
 -(NSString*)apiKey;
+-(NSMutableDictionary*)parametersDictionaryWithAPIKey;
 
 @end
