@@ -82,6 +82,10 @@
 		7AF3AFFA16FCA76A007C0067 /* callout.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7AF3AFF916FCA76A007C0067 /* callout.pdf */; };
 		7AF3AFFD16FCA7AC007C0067 /* HintManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF3AFFC16FCA7AC007C0067 /* HintManager.m */; };
 		7AF3B00516FCA868007C0067 /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF3B00416FCA868007C0067 /* NSTimer+Blocks.m */; };
+		7AF3B00916FCB6A2007C0067 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF3B00716FCB6A2007C0067 /* EventListViewController.m */; };
+		7AF3B00A16FCB6A2007C0067 /* EventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF3B00816FCB6A2007C0067 /* EventListViewController.xib */; };
+		7AF3B00D16FCBB46007C0067 /* backBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF3B00B16FCBB46007C0067 /* backBtn.png */; };
+		7AF3B00E16FCBB46007C0067 /* backBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF3B00C16FCBB46007C0067 /* backBtn@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +229,11 @@
 		7AF3AFFC16FCA7AC007C0067 /* HintManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintManager.m; sourceTree = "<group>"; };
 		7AF3B00316FCA868007C0067 /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		7AF3B00416FCA868007C0067 /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
+		7AF3B00616FCB6A2007C0067 /* EventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListViewController.h; sourceTree = "<group>"; };
+		7AF3B00716FCB6A2007C0067 /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
+		7AF3B00816FCB6A2007C0067 /* EventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListViewController.xib; sourceTree = "<group>"; };
+		7AF3B00B16FCBB46007C0067 /* backBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBtn.png; sourceTree = "<group>"; };
+		7AF3B00C16FCBB46007C0067 /* backBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backBtn@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +307,8 @@
 		7A0816A216FBFF2900DBC505 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7AF3B00B16FCBB46007C0067 /* backBtn.png */,
+				7AF3B00C16FCBB46007C0067 /* backBtn@2x.png */,
 				7AF3AFF916FCA76A007C0067 /* callout.pdf */,
 				7A0816BA16FC040900DBC505 /* back.jpg */,
 				7A0816BB16FC040900DBC505 /* back@2x.jpg */,
@@ -373,6 +384,9 @@
 				7A0816E216FC2B7D00DBC505 /* TagCloudViewController+Graphics.m */,
 				7A0816E716FC31F100DBC505 /* TagCloudViewController+Sensors.m */,
 				7A7EFEAB16FA160D005DA4BA /* TagCloudViewController.xib */,
+				7AF3B00616FCB6A2007C0067 /* EventListViewController.h */,
+				7AF3B00716FCB6A2007C0067 /* EventListViewController.m */,
+				7AF3B00816FCB6A2007C0067 /* EventListViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -684,6 +698,9 @@
 				7A04799316FC369000D71C2A /* Icon-72.png in Resources */,
 				7A04799416FC369000D71C2A /* iTunesArtwork in Resources */,
 				7AF3AFFA16FCA76A007C0067 /* callout.pdf in Resources */,
+				7AF3B00A16FCB6A2007C0067 /* EventListViewController.xib in Resources */,
+				7AF3B00D16FCBB46007C0067 /* backBtn.png in Resources */,
+				7AF3B00E16FCBB46007C0067 /* backBtn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +759,7 @@
 				7A0816E816FC31F100DBC505 /* TagCloudViewController+Sensors.m in Sources */,
 				7AF3AFFD16FCA7AC007C0067 /* HintManager.m in Sources */,
 				7AF3B00516FCA868007C0067 /* NSTimer+Blocks.m in Sources */,
+				7AF3B00916FCB6A2007C0067 /* EventListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

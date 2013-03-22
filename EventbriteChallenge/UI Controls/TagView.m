@@ -19,7 +19,7 @@
 @implementation TagView
 
 -(NSString*)description {
-    return self.tagName;
+    return [self.tagName stringByAppendingString:[super description]];
 }
 
 @end

@@ -52,7 +52,7 @@ static AVAudioPlayer * __player;
     v.titleLabel.numberOfLines = 3;
     v.titleLabel.textAlignment = NSTextAlignmentCenter;
     CGSize size = [tag sizeWithFont:font constrainedToSize:CGSizeMake(300, 300)];
-    [v setFrame:CGRectMake(arc4random_uniform(t.frame.size.width), arc4random_uniform(t.frame.size.height), size.width, size.height+fontSize)];
+    [v setFrame:CGRectMake(arc4random_uniform(t.frame.size.width), arc4random_uniform(t.frame.size.height), size.width, size.height+fontSize/2)];
     v.originalSize = v.frame.size;
     v.titleLabel.shadowOffset = CGSizeMake(1, 1);
     [v addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];

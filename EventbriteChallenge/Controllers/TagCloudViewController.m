@@ -16,13 +16,15 @@
 #import "TagCloudView.h"
 #import "TagView.h"
 #import "HintManager.h"
+#import "EventListViewController.h"
 
-@interface TagCloudViewController () <CLLocationManagerDelegate, UIAlertViewDelegate>
+@interface TagCloudViewController () <CLLocationManagerDelegate, UIAlertViewDelegate, UIPopoverControllerDelegate>
 
 @property (nonatomic, strong) CLLocation * lastKnownLocation;
 @property (nonatomic, strong) CLLocationManager * locationManager;
 @property (nonatomic, strong) UIAlertView * alertView;
 @property (nonatomic, strong) NSMutableDictionary * data;
+@property (nonatomic, strong) UIPopoverController * popover;
 
 @end
 
@@ -129,9 +131,41 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
     [manager stopUpdatingLocation];
 }
 
--(void)buttonTap:(TagView*)tagView {
-    NSString * tag = tagView.tagName;
-    NSSet * events = [self.data objectForKey:tag];
+-(void)viewWillAppear:(BOOL)animated {
+    [UIView animateWithDuration:.3 animations:^{
+        self.tagView.alpha = 1.;
+        self.background.alpha = 1.;
+    }];
+    [self.tagView releaseLock];
+}
+
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    self.popover = nil;
+    [self.tagView releaseLock];
+}
+
+-(void)buttonTap:(TagView*)tag {
+    NSString * tagName = tag.tagName;
+    NSSet * events = [self.data objectForKey:tagName];
+    BOOL iPad = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
+    if (iPad) {
+        EventListViewController * ctrl = [[EventListViewController alloc] initWithTagView:nil events:events];
+        self.popover = [[UIPopoverController alloc] initWithContentViewController:ctrl];
+        [self.popover presentPopoverFromRect:tag.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+    else {
+        tag.frame = [tag convertRect:tag.bounds toView:self.view];
+        [self.view addSubview:tag];
+        [UIView animateWithDuration:.3 animations:^{
+            self.tagView.alpha = 0.;
+            self.background.alpha = 0.;
+            tag.frame = CGRectMake(0,0,self.view.frame.size.width,tag.frame.size.height);
+        } completion:^(BOOL finished) {
+            [tag removeTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventAllEvents];
+            EventListViewController * ctrl = [[EventListViewController alloc] initWithTagView:tag events:events];
+            [self.navigationController pushViewController:ctrl animated:NO];
+        }];
+    }
 }
 
 -(void)dealloc {

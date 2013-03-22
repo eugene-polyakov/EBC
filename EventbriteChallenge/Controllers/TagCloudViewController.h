@@ -12,6 +12,7 @@
 @interface TagCloudViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet TagCloudView * tagView;
+@property (strong, nonatomic) IBOutlet UIImageView *background;
 
 @end
 
