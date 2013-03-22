@@ -8,6 +8,7 @@
 
 #import "EventListViewController.h"
 #import "Model.h"
+#import "EventCell.h"
 
 @interface EventListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -37,14 +38,24 @@
     return self.events.count;
 }
 
+-(void)layoutSubviews {
+    
+}
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
     Event * event = [self.events objectAtIndex:indexPath.row];
-    cell.textLabel.text = event.title;
+    EventCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [EventCell cellForEvent:event];
+    } else {
+        [cell applyEvent:event];
+    }
+    
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [EventCell height];
 }
 
 - (void)viewDidLoad

@@ -25,6 +25,7 @@
 @property (nonatomic, strong) UIAlertView * alertView;
 @property (nonatomic, strong) NSMutableDictionary * data;
 @property (nonatomic, strong) UIPopoverController * popover;
+@property (nonatomic, strong) TagView * selectedTag;
 
 @end
 
@@ -91,6 +92,7 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
           for (id key in dic.allKeys) {
               NSSet * events = [dic objectForKey:key];
               int z = maxCount / events.count;
+              // let's just use number of events for this tag as a measure
               [self addViewForTag:key z:z];
           }
           
@@ -142,6 +144,8 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
 -(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
     self.popover = nil;
     [self.tagView releaseLock];
+    self.selectedTag.selected = NO;
+    self.selectedTag = nil;
 }
 
 -(void)buttonTap:(TagView*)tag {
@@ -150,8 +154,11 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
     BOOL iPad = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
     if (iPad) {
         EventListViewController * ctrl = [[EventListViewController alloc] initWithTagView:nil events:events];
+        tag.selected = YES;
         self.popover = [[UIPopoverController alloc] initWithContentViewController:ctrl];
         [self.popover presentPopoverFromRect:tag.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        self.selectedTag = tag;
+        self.popover.delegate = self;
     }
     else {
         tag.frame = [tag convertRect:tag.bounds toView:self.view];

@@ -86,6 +86,8 @@
 		7AF3B00A16FCB6A2007C0067 /* EventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF3B00816FCB6A2007C0067 /* EventListViewController.xib */; };
 		7AF3B00D16FCBB46007C0067 /* backBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF3B00B16FCBB46007C0067 /* backBtn.png */; };
 		7AF3B00E16FCBB46007C0067 /* backBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF3B00C16FCBB46007C0067 /* backBtn@2x.png */; };
+		7AF3B01216FCC5E2007C0067 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF3B01116FCC5E2007C0067 /* EventCell.m */; };
+		7AF3B01416FCC613007C0067 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF3B01316FCC613007C0067 /* EventCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +236,9 @@
 		7AF3B00816FCB6A2007C0067 /* EventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListViewController.xib; sourceTree = "<group>"; };
 		7AF3B00B16FCBB46007C0067 /* backBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBtn.png; sourceTree = "<group>"; };
 		7AF3B00C16FCBB46007C0067 /* backBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backBtn@2x.png"; sourceTree = "<group>"; };
+		7AF3B01016FCC5E1007C0067 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
+		7AF3B01116FCC5E2007C0067 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
+		7AF3B01316FCC613007C0067 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +384,7 @@
 		7A79A22A16F9404700CA2DDA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7AF3B00F16FCC5C8007C0067 /* Cells */,
 				7A7EFEA916FA160D005DA4BA /* TagCloudViewController.h */,
 				7A7EFEAA16FA160D005DA4BA /* TagCloudViewController.m */,
 				7A0816E216FC2B7D00DBC505 /* TagCloudViewController+Graphics.m */,
@@ -424,10 +430,6 @@
 		7ACAF87716F7EF6900CB6591 = {
 			isa = PBXGroup;
 			children = (
-				7A0816E416FC317F00DBC505 /* CoreMotion.framework */,
-				7A0816DF16FC2B3700DBC505 /* AVFoundation.framework */,
-				7A0816DD16FC2B2400DBC505 /* AudioToolbox.framework */,
-				7A08169416FBC9FC00DBC505 /* CoreLocation.framework */,
 				7ACAF8C116F7EF7F00CB6591 /* lib */,
 				7ACAF88916F7EF6900CB6591 /* EventbriteChallenge */,
 				7ACAF8B016F7EF6900CB6591 /* EventbriteChallengeTests */,
@@ -448,6 +450,10 @@
 		7ACAF88216F7EF6900CB6591 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A0816E416FC317F00DBC505 /* CoreMotion.framework */,
+				7A0816DF16FC2B3700DBC505 /* AVFoundation.framework */,
+				7A0816DD16FC2B2400DBC505 /* AudioToolbox.framework */,
+				7A08169416FBC9FC00DBC505 /* CoreLocation.framework */,
 				7ACAFEA916F815F700CB6591 /* SystemConfiguration.framework */,
 				7ACAFEA716F815F000CB6591 /* Security.framework */,
 				7ACAFEA516F815EB00CB6591 /* MobileCoreServices.framework */,
@@ -563,6 +569,16 @@
 				7ACAFED516F828EA00CB6591 /* JSONKit.m */,
 			);
 			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		7AF3B00F16FCC5C8007C0067 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7AF3B01016FCC5E1007C0067 /* EventCell.h */,
+				7AF3B01116FCC5E2007C0067 /* EventCell.m */,
+				7AF3B01316FCC613007C0067 /* EventCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -701,6 +717,7 @@
 				7AF3B00A16FCB6A2007C0067 /* EventListViewController.xib in Resources */,
 				7AF3B00D16FCBB46007C0067 /* backBtn.png in Resources */,
 				7AF3B00E16FCBB46007C0067 /* backBtn@2x.png in Resources */,
+				7AF3B01416FCC613007C0067 /* EventCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +777,7 @@
 				7AF3AFFD16FCA7AC007C0067 /* HintManager.m in Sources */,
 				7AF3B00516FCA868007C0067 /* NSTimer+Blocks.m in Sources */,
 				7AF3B00916FCB6A2007C0067 /* EventListViewController.m in Sources */,
+				7AF3B01216FCC5E2007C0067 /* EventCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
