@@ -76,15 +76,16 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
 
           [hud hide:YES];
           
+          [self.tagView removeAll];
+          
           int maxCount = 0;
           NSDictionary * dic = [DataUtils groupedDictionaryOfEvents:mappingResult.array maxCount:&maxCount];
-          self.data = dic;
+          self.data = [dic mutableCopy];
                     
           for (id key in dic.allKeys) {
               NSSet * events = [dic objectForKey:key];
               int z = maxCount / events.count;
               [self addViewForTag:key z:z];
-
           }
           
       } failure:^(RKObjectRequestOperation *operation, NSError *error) {
@@ -115,7 +116,7 @@ static NSTimeInterval const MIN_LOCATION_INTERVAL = 60;
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation * latest = [locations objectAtIndex:0];
     // Let's protect from too frequent updates. once per minute max
-    if ([latest.timestamp timeIntervalSinceDate:self.lastKnownLocation.timestamp] >= MIN_LOCATION_INTERVAL) {
+    if (!self.lastKnownLocation || [latest.timestamp timeIntervalSinceDate:self.lastKnownLocation.timestamp] >= MIN_LOCATION_INTERVAL) {
         self.lastKnownLocation = [locations objectAtIndex:0];
         [self locationUpdateComplete];
     }

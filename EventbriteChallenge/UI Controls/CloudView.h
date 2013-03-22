@@ -11,9 +11,6 @@
 
 @interface CloudView : UIImageView<FlyingObject>
 
-@property (nonatomic) CGFloat z;
-@property (nonatomic) CGSize originalSize;
-
 @property (nonatomic, strong) void(^tapBlock)(CloudView* cloud);
 
 @end

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A04799016FC369000D71C2A /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04798B16FC369000D71C2A /* Icon-114.png */; };
+		7A04799116FC369000D71C2A /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04798C16FC369000D71C2A /* Icon-144.png */; };
+		7A04799216FC369000D71C2A /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04798D16FC369000D71C2A /* Icon-57.png */; };
+		7A04799316FC369000D71C2A /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04798E16FC369000D71C2A /* Icon-72.png */; };
+		7A04799416FC369000D71C2A /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 7A04798F16FC369000D71C2A /* iTunesArtwork */; };
 		7A08168E16FBC8D600DBC505 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08168D16FBC8D600DBC505 /* MBProgressHUD.m */; };
 		7A08169516FBC9FC00DBC505 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08169416FBC9FC00DBC505 /* CoreLocation.framework */; };
 		7A08169816FBD11700DBC505 /* DataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08169716FBD11700DBC505 /* DataUtils.m */; };
@@ -122,6 +127,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A04798B16FC369000D71C2A /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
+		7A04798C16FC369000D71C2A /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
+		7A04798D16FC369000D71C2A /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
+		7A04798E16FC369000D71C2A /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		7A04798F16FC369000D71C2A /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		7A08168C16FBC8D600DBC505 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		7A08168D16FBC8D600DBC505 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		7A08169416FBC9FC00DBC505 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -244,6 +254,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A04798A16FC369000D71C2A /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				7A04798B16FC369000D71C2A /* Icon-114.png */,
+				7A04798C16FC369000D71C2A /* Icon-144.png */,
+				7A04798D16FC369000D71C2A /* Icon-57.png */,
+				7A04798E16FC369000D71C2A /* Icon-72.png */,
+				7A04798F16FC369000D71C2A /* iTunesArtwork */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
 		7A08169C16FBF50400DBC505 /* UI Controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +279,7 @@
 		7A0816A116FBFF2900DBC505 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A04798A16FC369000D71C2A /* icons */,
 				7A0816DA16FC2AA000DBC505 /* sounds */,
 				7A0816C816FC1B9B00DBC505 /* fonts */,
 				7A0816A216FBFF2900DBC505 /* images */,
@@ -642,6 +665,11 @@
 				7A0816D716FC269200DBC505 /* font3.ttf in Resources */,
 				7A0816D916FC272700DBC505 /* font6.ttf in Resources */,
 				7A0816DC16FC2AB100DBC505 /* wheeee.aiff in Resources */,
+				7A04799016FC369000D71C2A /* Icon-114.png in Resources */,
+				7A04799116FC369000D71C2A /* Icon-144.png in Resources */,
+				7A04799216FC369000D71C2A /* Icon-57.png in Resources */,
+				7A04799316FC369000D71C2A /* Icon-72.png in Resources */,
+				7A04799416FC369000D71C2A /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,7 +806,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -804,7 +832,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

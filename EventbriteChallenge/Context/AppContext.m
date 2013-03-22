@@ -47,12 +47,6 @@ static NSString * apiKey;
 
         [objectManager addResponseDescriptor:responseDescriptor2];
 
-        for (NSString * ff in [UIFont familyNames]) {
-            NSLog(@"%@", ff);
-            for (NSString * fn in [UIFont fontNamesForFamilyName:ff]) {
-                NSLog(@"--%@", fn);
-            }
-        }
     }
     return self;
 }

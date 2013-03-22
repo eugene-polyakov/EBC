@@ -8,8 +8,18 @@
 
 #import "TagView.h"
 
+@interface TagView()
+
+@property (nonatomic) CGFloat z;
+@property (nonatomic) CGSize originalSize;
+@property (nonatomic) float individualDirection;
+
+@end
+
 @implementation TagView
 
-
+-(NSString*)description {
+    return self.tagName;
+}
 
 @end

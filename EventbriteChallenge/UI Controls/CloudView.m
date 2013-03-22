@@ -8,6 +8,15 @@
 
 #import "CloudView.h"
 
+@interface CloudView()
+
+
+@property (nonatomic) CGFloat z;
+@property (nonatomic) CGSize originalSize;
+@property (nonatomic) float individualDirection;
+
+@end
+
 @implementation CloudView
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

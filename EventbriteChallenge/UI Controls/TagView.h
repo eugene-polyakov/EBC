@@ -12,7 +12,6 @@
 @interface TagView : UIButton<FlyingObject>
 
 @property (nonatomic, strong) NSString * tagName;
-@property (nonatomic) CGFloat z;
-@property (nonatomic) CGSize originalSize;
+
 
 @end

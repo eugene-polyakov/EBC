@@ -10,7 +10,11 @@
 
 @protocol FlyingObject
 
-@property (nonatomic) CGFloat z;
-@property (nonatomic) CGSize originalSize;
+-(CGFloat)z;
+-(void)setZ:(CGFloat)z;
+-(CGSize)originalSize;
+-(void)setOriginalSize:(CGSize)originalSize;
+-(float)individualDirection;
+-(void)setIndividualDirection:(float)individualDirection;
 
 @end

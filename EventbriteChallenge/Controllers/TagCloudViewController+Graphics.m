@@ -13,6 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 static NSArray * __fonts;
+static AVAudioPlayer * __player;
 
 @implementation TagCloudViewController (Graphics)
 
@@ -42,9 +43,9 @@ static NSArray * __fonts;
     [v setTitle:tag forState:UIControlStateNormal];
     [v addTarget:self action:@selector(lockDown) forControlEvents:UIControlEventTouchDown];
     [v addTarget:self action:@selector(releaseLock) forControlEvents:UIControlEventTouchUpOutside];
-    [v setTitleColor:[UIColor colorWithHue:arc4random_uniform(255)/255. saturation:.3 brightness:.5 alpha:MAX(1./z, .7)] forState:UIControlStateNormal];
+    [v setTitleColor:[UIColor colorWithHue:arc4random_uniform(255)/255. saturation:.7 brightness:.5 alpha:MAX(1./z, .7)] forState:UIControlStateNormal];
     [v setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    float fontSize = MAX(40-z*3., 10);
+    float fontSize = MAX(50-z*3., 10);
     int fontNo = arc4random_uniform(__fonts.count);
     UIFont * font = [UIFont fontWithName:[__fonts objectAtIndex:fontNo] size:fontSize];
     [v.titleLabel setFont:font];
@@ -66,9 +67,10 @@ static NSArray * __fonts;
     NSError *error;
     
     NSURL* url = [[NSBundle mainBundle] URLForResource:@"wheeee" withExtension:@"aiff"];
-    
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    [audioPlayer play];
+    if (!__player) {
+        __player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    }
+    [__player play];
 }
 
 -(void)addTwoClouds {

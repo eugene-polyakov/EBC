@@ -9,17 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "FlyingObject.h"
 
-#define CLOUD_ANIMATION_DURATION .4
+#define CLOUD_ANIMATION_DURATION .2
 
 @interface TagCloudView : UIView
 
-@property (nonatomic) CGFloat windDirection;
-@property (nonatomic) CGFloat windSpeed;
+@property (nonatomic) float windDirection;
+@property (nonatomic) float windSpeed;
 
 -(void)addFlyingObject:(UIView<FlyingObject>*)object;
 -(void)removeFlyingObject:(UIView<FlyingObject>*)object;
+-(void)removeAll;
 
 -(void)lockDown;
 -(void)releaseLock;
+
+-(void)setTargetSpeed:(float)targetSpeed rate:(float)rate;
+-(void)runAway;
 
 @end

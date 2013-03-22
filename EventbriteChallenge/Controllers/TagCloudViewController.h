@@ -22,7 +22,7 @@
 
 @end
 
-@interface TagCloudViewController(Sensors)
+@interface TagCloudViewController(Sensors)<UIAccelerometerDelegate>
 
 -(void)startTracking;
 -(void)stopTracking;

@@ -16,11 +16,19 @@
 @property (nonatomic) NSTimer * animationTimer;
 @property (nonatomic, strong) NSMutableSet * knownFlyingObjects;
 @property (nonatomic) BOOL locked;
+@property (nonatomic) float targetSpeedInt;
+@property (nonatomic) float rate;
+@property (nonatomic) float random;
 
 @end
 
 
 @implementation TagCloudView
+
+-(void)setTargetSpeed:(float)targetSpeed rate:(float)rate {
+    self.targetSpeedInt = targetSpeed;
+    self.rate = rate;
+}
 
 -(void)addFlyingObject:(UIView<FlyingObject> *)object {
     @synchronized (self.knownFlyingObjects) {
@@ -36,12 +44,21 @@
     [object removeFromSuperview];
 }
 
+-(void)removeAll {
+    @synchronized (self.knownFlyingObjects) {
+        [self.knownFlyingObjects makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        [self.knownFlyingObjects removeAllObjects];
+    }
+}
+
 -(void)startTimer {
     self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:CLOUD_ANIMATION_DURATION target:self selector:@selector(animationTimerFire) userInfo:nil repeats:YES];
-    [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(windTimerFire) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(windTimerFire) userInfo:nil repeats:YES];
 }
 
 -(void)windTimerFire {
+    self.windSpeed += (self.targetSpeedInt - self.windSpeed) * MAX(self.rate, 1./8.);
+    self.random /= 2;
     int dWind = arc4random_uniform(4)-2;
     self.windSpeed += dWind;
     float dDir = (arc4random_uniform(10)-5.)/10.;
@@ -55,8 +72,9 @@
         [self.knownFlyingObjects enumerateObjectsUsingBlock:^(UIView<FlyingObject> * obj, BOOL *stop) {
             CGRect frame = obj.frame;
             float accident = (arc4random_uniform(10) - 5.)/30. + 1;
-            CGFloat dx = 1/obj.z * accident * self.windSpeed * cos(self.windDirection);
-            CGFloat dy = 1/obj.z * accident * self.windSpeed * sin(self.windDirection);
+            float wd = self.windDirection + obj.individualDirection * self.random;
+            CGFloat dx = 1/obj.z * accident * self.windSpeed * cos(wd);
+            CGFloat dy = 1/obj.z * accident * self.windSpeed * sin(wd);
             BOOL animate = YES;
             frame = CGRectOffset(frame, dx, dy);
             if (CGRectGetMinX(frame) >= bounds.size.width && dx > 0) {
@@ -125,10 +143,17 @@
      ];
 }
 
+-(void)runAway {
+    for (UIView<FlyingObject> * fo in self.knownFlyingObjects) {
+        fo.individualDirection = (arc4random_uniform(2) - 1) * M_PI;
+    }
+    self.random = 3.;
+}
+
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self lockDown];
+    [self setTargetSpeed:0. rate:.3];
 }
 
 -(void)releaseLock {
